@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se - JM Viagens</title>
+    <title>Buscar Pacotes - JM Viagens</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,7 +33,7 @@
             flex-direction: column;
             align-items: center;
         }
-        label, input, select, textarea {
+        label, input, select {
             width: 100%;
             padding: 10px;
             margin: 5px;
@@ -60,32 +60,34 @@
         </tr>
     </table>
 
-    <!-- Formulário de cadastro -->
+    <!-- Formulário de busca de pacotes -->
     <div class="container">
-        <h1>Cadastre-se</h1>
-        <form action="https://qfqdkj.hospedagemelastica.com.br/pweb/salvar.jsp" method="post">
-            
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
+        <h1>Buscar Pacotes de Viagem</h1>
+        <form action="#" method="POST">
+            <label for="origem">Origem:</label>
+            <input type="text" id="origem" name="origem" required>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino" required>
 
-            <label for="login">Login:</label>
-            <input type="text" id="login" name="login" required>
+            <label for="data-partida">Data de Partida:</label>
+            <input type="date" id="data-partida" name="data-partida" required>
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
+            <label for="data-retorno">Data de Retorno:</label>
+            <input type="date" id="data-retorno" name="data-retorno" required>
 
-            <label for="confirmarSenha">Confirmar Senha:</label>
-            <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+            <label for="quartos">Quartos:</label>
+            <input type="number" id="quartos" name="quartos" min="1" required>
 
-            <label for="observacao">Observações:</label>
-            <textarea id="observacao" name="observacao"></textarea>
+            <label for="adultos">Quantidade de Adultos:</label>
+            <input type="number" id="adultos" name="adultos" min="1" required>
+
+            <label for="criancas">Quantidade de Crianças:</label>
+            <input type="number" id="criancas" name="criancas" min="0">
 
             <br>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Buscar Pacote</button>
         </form>
     </div>
 

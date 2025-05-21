@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
-
-    <meta name="JM Viagens" content="width=device-width, initial-scale=1.0">
-
-    <title>JM Viagens</title>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos Nacionais - JM Viagens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 15px;
+            border: 0px solid #ddd;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .destino {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+        }
+        .destino img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    
-     <!-- Links -->
 
+    <!-- Cabeçalho -->
     <table border="0" width="100%" cellpadding="10" cellspacing="5">
-
         <tr>
             <td>
                 <img src="imagens/logo.png" width="50%">
@@ -24,47 +57,45 @@
             <td align="right">
                 <a href="index.html">Home</a> |
                 <a href="quem-somos.html">Quem Somos</a> |
-                <a href="contato.html">Contato</a>
+                <a href="contato.html">Contato</a> |
+                <a href="destinos.html">Destinos</a> |
+                <a href="buscar-pacotes.html">Buscar Pacotes</a> |
+                <a href="cadastro.html">Cadastre-se</a>
             </td>
         </tr>
+    </table>
 
-        <tr>
-            <td colspan="2">
-                <img src="imagens/principal.png" width="100%" />
-            </td>
-        </tr>
+    <!-- Pacotes de viagem nacionais -->
+    <h1>Pacotes de Viagem Nacionais</h1>
 
-        <tr>
-            <td colspan="2">
-                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-                
-                <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).</p> 
-            </td>
-        </tr>
+    <div class="container">
+        <div class="destino">
+            <img src="https://th.bing.com/th/id/R.1a0c768d464f0a1866d3187629ea3b46?rik=IAlgctcTvc%2bNmg&riu=http%3a%2f%2fwww.guiaviajarmelhor.com.br%2fwp-content%2fuploads%2f2015%2f06%2fDicas-Rio-de-Janeiro-1.jpg&ehk=IgaWWp1ivv0Fsiq7AkN1b3sMGAcHFnFPuFgYApoU%2bi8%3d&risl=&pid=ImgRaw&r=0">
+            <h2>Rio de Janeiro - RJ</h2>
+            <p>Desfrute das praias icônicas e da vibrante vida cultural do Rio! Pacote inclui passagens, hospedagem e passeios.</p>
+        </div>
 
+        <div class="destino">
+            <img src="https://th.bing.com/th/id/R.5ea4aa6522b18ce1bc144c2da471df96?rik=eCaarkcDfK6dbQ&riu=http%3a%2f%2fwww.fotoexplorer.com%2fwp-content%2fuploads%2f2019%2f02%2fFotoexplorer-Marcio-Cabral-BRA-PE-Arq-Fernando-Noronha-001-capa.jpg&ehk=pbaJ0LY59Hp4nHdXT3fUdXi9V4ARk0aFJAmIUTzRtow%3d&risl=&pid=ImgRaw&r=0">
+            <h2>Fernando de Noronha - PE</h2>
+            <p>Paraíso ecológico com praias deslumbrantes! Pacote inclui hospedagem e mergulho em águas cristalinas.</p>
+        </div>
+
+        <div class="destino">
+            <img src="https://blog.vitaboulevard.com.br/wp-content/uploads/2021/04/d686ab22e2acaa19ac171e844aa640d5-scaled.jpeg">
+            <h2>Gramado - RS</h2>
+            <p>Charme europeu no sul do Brasil! Pacote inclui hospedagem, passeios e degustação de chocolates artesanais.</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <table border="0" width="100%" cellpadding="10" cellspacing="5">
         <tr>
-            <td align="center" colspan="2">
+            <td align="center">
                 <h4>Todos os direitos reservados</h4>
             </td>
         </tr>
-
     </table>
-
-        <h1>Entre em sua Conta</h1> 
-
-        <form>
-        Login: <br/>
-       <input type="text" name="login" required><br/>
-
-         Senha: <br/>
-       <input type="password" name="senha" required><br/>
-
-       <br/>
-
-        <input type="submit" value="Entrar">
-        <a href="cadastro.html">Cadastre-se</a>
-
-    </form>
 
 </body>
 
