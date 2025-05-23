@@ -5,40 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se - JM Viagens</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        .container {
-            width: 50%;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label, input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px;
-        }
-    </style>
 </head>
 
 <body>
@@ -61,33 +27,40 @@
     </table>
 
     <!-- Formulário de cadastro -->
-    <div class="container">
-        <h1>Cadastre-se</h1>
-        <form action="https://qfqdkj.hospedagemelastica.com.br/pweb/salvar.jsp" method="post">
-            
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="login">Login:</label>
-            <input type="text" id="login" name="login" required>
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-
-            <label for="confirmarSenha">Confirmar Senha:</label>
-            <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-
-            <label for="observacao">Observações:</label>
-            <textarea id="observacao" name="observacao"></textarea>
-
-            <br>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+    <table border="1" width="50%" align="center" cellpadding="10" cellspacing="5">
+        <tr>
+            <td colspan="2" align="center"><h1>Cadastre-se</h1></td>
+        </tr>
+        <tr>
+            <td><label for="nome">Nome Completo:</label></td>
+            <td><input type="text" id="nome" name="nome" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-mail:</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td><label for="login">Login:</label></td>
+            <td><input type="text" id="login" name="login" required></td>
+        </tr>
+        <tr>
+            <td><label for="senha">Senha:</label></td>
+            <td><input type="password" id="senha" name="senha" required></td>
+        </tr>
+        <tr>
+            <td><label for="confirmarSenha">Confirmar Senha:</label></td>
+            <td><input type="password" id="confirmarSenha" name="confirmarSenha" required></td>
+        </tr>
+        <tr>
+            <td><label for="observacao">Observações:</label></td>
+            <td><textarea id="observacao" name="observacao"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Enviar</button>
+            </td>
+        </tr>
+    </table>
 
     <!-- Rodapé -->
     <table border="0" width="100%" cellpadding="10" cellspacing="5">

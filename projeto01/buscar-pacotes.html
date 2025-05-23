@@ -5,40 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Pacotes - JM Viagens</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        .container {
-            width: 50%;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label, input, select {
-            width: 100%;
-            padding: 10px;
-            margin: 5px;
-        }
-    </style>
 </head>
 
 <body>
@@ -61,35 +27,44 @@
     </table>
 
     <!-- Formulário de busca de pacotes -->
-    <div class="container">
-        <h1>Buscar Pacotes de Viagem</h1>
-        <form action="#" method="POST">
-            <label for="origem">Origem:</label>
-            <input type="text" id="origem" name="origem" required>
-
-            <label for="destino">Destino:</label>
-            <input type="text" id="destino" name="destino" required>
-
-            <label for="data-partida">Data de Partida:</label>
-            <input type="date" id="data-partida" name="data-partida" required>
-
-            <label for="data-retorno">Data de Retorno:</label>
-            <input type="date" id="data-retorno" name="data-retorno" required>
-
-            <label for="quartos">Quartos:</label>
-            <input type="number" id="quartos" name="quartos" min="1" required>
-
-            <label for="adultos">Quantidade de Adultos:</label>
-            <input type="number" id="adultos" name="adultos" min="1" required>
-
-            <label for="criancas">Quantidade de Crianças:</label>
-            <input type="number" id="criancas" name="criancas" min="0">
-
-            <br>
-
-            <button type="submit">Buscar Pacote</button>
-        </form>
-    </div>
+    <table border="1" width="50%" align="center" cellpadding="10" cellspacing="5">
+        <tr>
+            <td colspan="2" align="center"><h1>Buscar Pacotes de Viagem</h1></td>
+        </tr>
+        <tr>
+            <td><label for="origem">Origem:</label></td>
+            <td><input type="text" id="origem" name="origem" required></td>
+        </tr>
+        <tr>
+            <td><label for="destino">Destino:</label></td>
+            <td><input type="text" id="destino" name="destino" required></td>
+        </tr>
+        <tr>
+            <td><label for="data-partida">Data de Partida:</label></td>
+            <td><input type="date" id="data-partida" name="data-partida" required></td>
+        </tr>
+        <tr>
+            <td><label for="data-retorno">Data de Retorno:</label></td>
+            <td><input type="date" id="data-retorno" name="data-retorno" required></td>
+        </tr>
+        <tr>
+            <td><label for="quartos">Quartos:</label></td>
+            <td><input type="number" id="quartos" name="quartos" min="1" required></td>
+        </tr>
+        <tr>
+            <td><label for="adultos">Quantidade de Adultos:</label></td>
+            <td><input type="number" id="adultos" name="adultos" min="1" required></td>
+        </tr>
+        <tr>
+            <td><label for="criancas">Quantidade de Crianças:</label></td>
+            <td><input type="number" id="criancas" name="criancas" min="0"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Buscar Pacote</button>
+            </td>
+        </tr>
+    </table>
 
     <!-- Rodapé -->
     <table border="0" width="100%" cellpadding="10" cellspacing="5">
