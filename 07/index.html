@@ -1,35 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famílias de Fontes</title>
+    <style>
 
-  <title>Minha primeira página CSS</title>
+       /* .fonteSerif {
+            font-family: "Times New Roman", Verdana, Arial, serif;
+            font-size: 5em;
+        }
 
-  <link rel="stylesheet" href="meuestilo.css">
+        .fonteSans-Serif {
+            font-family: "Verdana", Times, serif;
+            font-size: 2.5em; /* Corrigido de 'font: size' para 'font-size' 
+        }
 
+        .fonteMonospace {
+            font-family: "Courier New", sans-serif, Helvetica;
+            font-size: 1.25em;
+        }
+
+        h1 { font-size: 40px; }
+        h2 { font-size: 30px; }
+        p { font-size: 14px; }
+        */
+
+        .conteudo{
+            font-size: 30px;
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- Menu de navegação do site -->
-<ul class="navbar">
-  <li><a href="index.html">Home page</a></li>
-  <li><a href="pensamentos.html">Pensamentos</a></li>
-  <li><a href="cidade.html">Minha cidade</a></li>
-  <li><a href="links.html">Links</a></li>
-</ul>
-    <a target="_blank" href="https://eduardoedy17.github.io/pweb/07/">Maujor</a>
-<!-- Conteúdo -->
-<h1>Minha primeira página CSS</h1>
-
-<p>Bem-vindos à minha página estilizada!</p>
-
-<p>Minha página não contém imagens, mas pelo menos está estilizada.
-Ela contém links, ainda que eles não levem a lugar algum…</p>
-
-<p>Deveria haver mais textos aqui, porém eu ainda não decidi o que escrever.</p>
-
-<!-- Data e assinatura -->
-<address>Construída em 15 de dezembro de 2004<br> por mim mesmo.</address>
-
+    <div class="conteudo">
+        <p class="fonteSerif">Programação web</p>
+        <p class="fonteSans-Serif">Programação Comercial</p>
+        <p class="fonteMonospace">Programação de Sistemas e Apps</p> <!-- Corrigido 'claas' para 'class' -->
+    </div>
 </body>
 </html>
