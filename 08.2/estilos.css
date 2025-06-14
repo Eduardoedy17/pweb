@@ -1,0 +1,57 @@
+/* Estilo geral para a página */
+body {
+    background-color: #d6d6d6;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner principal para centralizar o conteúdo na página */
+.container {
+    max-width: 1200px;
+    margin: 50px auto; /* Adiciona margem no topo/embaixo e centraliza dos lados */
+    padding: 20px;
+}
+
+/* A Galeria agora é um contêiner flexível */
+.galeria {
+    display: flex;         /* Ativa o Flexbox */
+    flex-wrap: wrap;       /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens na linha */
+    gap: 10px;             /* Espaço entre os itens da galeria */
+    margin-bottom: 40px;   /* Espaço entre a galeria e o texto final */
+}
+
+/* Estilo para cada item (imagem + legenda) na galeria */
+.galeria-item {
+    background-color: white;
+    width: 300px;
+    padding: 5px;
+    text-align: left;
+    border: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito de card */
+}
+
+/* Estilo para a imagem dentro do item da galeria */
+.galeria-item img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do seu contêiner (.galeria-item) */
+    height: auto;
+    display: block;
+    border: 4px; /* Bordas levemente arredondadas para a imagem */
+}
+
+/* Estilo para a legenda (Resumo) */
+.galeria-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Estilo para o bloco de texto final */
+.texto-final p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 24px;
+}
