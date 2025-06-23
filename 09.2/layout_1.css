@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Garante que o body ocupa a altura total da viewport */
+}
+
+#layout1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 960px;
+    /* Largura máxima para o layout, como na imagem */
+    margin: 0 auto;
+    /* Centraliza o layout */
+    border: 1px solid #ccc;
+}
+
+#header1 {
+    background-color: #6a5acd;
+    /* Cor roxa similar à imagem */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#menu1 {
+    background-color: #f08080;
+    /* Cor rosa similar à imagem */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+#content-wrapper1 {
+    display: flex;
+    flex-grow: 1;
+    /* Permite que o conteúdo ocupe o espaço restante */
+}
+
+#left-col1 {
+    background-color: #ffd700;
+    /* Cor amarela similar à imagem */
+    flex-basis: 25%;
+    /* 25% da largura */
+    padding: 15px;
+    box-sizing: border-box;
+    /* Inclui padding na largura */
+}
+
+#center-col1 {
+    background-color: #90ee90;
+    /* Cor verde clara similar à imagem */
+    flex-basis: 50%;
+    /* 50% da largura */
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#right-col1 {
+    background-color: #ffa07a;
+    /* Cor laranja similar à imagem */
+    flex-basis: 25%;
+    /* 25% da largura */
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+
+#footer1 {
+    background-color: #87ceeb;
+    /* Cor azul clara similar à imagem */
+    padding: 15px;
+    text-align: center;
+    color: white;
+}

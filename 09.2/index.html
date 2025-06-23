@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Layout</title>
+    <style>
+        /* Estilos básicos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Fundo cinza claro */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            min-height: 100vh; /* Garante que o corpo ocupa a altura total */
+        }
+
+        /* Estilo para o cabeçalho principal */
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para o container dos links */
+        .links-container {
+            display: flex; /* Usa flexbox para organizar os itens */
+            flex-direction: column; /* Coloca os itens em coluna */
+            gap: 20px; /* Espaço entre os itens */
+            width: 100%;
+            max-width: 400px; /* Limita a largura do container */
+            padding: 20px;
+            background-color: #ffffff; /* Fundo branco para o container */
+            border: 1px solid #ddd; /* Borda sutil */
+            border-radius: 8px; /* Cantos levemente arredondados */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra simples */
+        }
+
+        /* Estilo para cada "caixa" de link */
+        .caixa {
+            padding: 15px;
+            background-color: #e9e9e9; /* Fundo cinza para as caixas */
+            border: 1px solid #ccc; /* Borda para as caixas */
+            border-radius: 5px; /* Cantos arredondados */
+            text-align: center;
+        }
+
+        /* Estilo para o parágrafo dentro da caixa */
+        .caixa p {
+            margin: 0; /* Remove margem padrão do parágrafo */
+            font-size: 1.1em;
+        }
+
+        /* Estilo para o link */
+        .caixa a {
+            text-decoration: none; /* Remove sublinhado padrão */
+            color: #007bff; /* Cor azul para os links */
+            font-weight: bold; /* Deixa o texto do link em negrito */
+        }
+
+        .caixa a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+            color: #0056b3; /* Cor azul mais escura ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplos de Layouts CSS</h1>
+
+    <div class="links-container">
+        <div id="fixo-link-header" class="caixa">
+            <p><a target="_blank" href="./layout_1.html">Fixar Header</a></p>
+        </div>
+
+        <div id="fixo-link-sidebar" class="caixa">
+            <p><a target="_blank" href="./layout_2.html">Fixar Side Bar</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
