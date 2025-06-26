@@ -1,0 +1,85 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    /* Garante que padding e border não alterem a largura final do elemento */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333; /* Fundo escuro para a página */
+    font-family: monospace;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 2rem; /* Espaçamento nas bordas da página */
+}
+
+/* --- ESTILO BASE DOS BLOCOS --- */
+.box {
+    background-color: #4F4F4F;
+    border: 2px solid #666;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- ESTRUTURA PRINCIPAL DO LAYOUT (Container) --- */
+.container {
+    display: flex;
+    flex-direction: column; /* Organiza os filhos em coluna: header, middle-section, footer */
+    gap: 1rem; /* Espaço entre os elementos principais */
+    max-width: 1400px;
+    margin: auto; /* Centraliza o container na página */
+}
+
+/* Seção do meio (Nav, Main, Aside) */
+.middle-section {
+    display: flex;
+    flex-direction: row; /* Organiza os filhos em linha */
+    gap: 1rem; /* Espaço entre nav, main e aside */
+}
+
+/* --- TAMANHO DOS BLOCOS PRINCIPAIS --- */
+header, footer {
+    min-height: 100px;
+}
+
+nav, aside {
+    flex-basis: 18%; /* Define a largura base das colunas laterais */
+    min-height: 500px;
+}
+
+main {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+}
+
+
+/* --- ESTRUTURA DO CONTEÚDO PRINCIPAL (Main) --- */
+.main-content {
+    display: grid;
+    /* Cria um grid 2x2 */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem; /* Espaço entre as 4 seções */
+    padding: 1rem;
+}
+
+.inner-section {
+    display: flex;
+    flex-direction: column; /* Organiza header, article, footer da seção em coluna */
+    gap: 0.5rem; /* Espaço entre eles */
+    padding: 0.5rem;
+    border-color: #777;
+}
+
+/* --- ESTILO DOS SUB-BLOCOS DENTRO DE CADA SEÇÃO --- */
+.sub-box {
+    background-color: #5A5A5A;
+    border-color: #888;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.article-box {
+    flex-grow: 1; /* Faz o <article> ocupar o espaço vertical restante na seção */
+}
