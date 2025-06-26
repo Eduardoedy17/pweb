@@ -1,65 +1,71 @@
-body {
-	margin: 0;
-	font-family: Arial, sans-serif;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
+html, body {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
 
-#layout2 {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	max-width: 1024px;
-	margin: 0 auto;
-	border: 1px solid #ccc;
-	text-align: center;
-}
+    #layout2 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      flex: 1;
+    }
 
-#menu2 {
+	#menu2 {
 	background-color: #cd5c5c;
 	padding: 10px;
-	text-align: center;
 	color: white;
 	font-weight: bold;
 	text-align: center;
-}
+	display: flex;
+	justify-content: center; /* Centraliza horizontalmente */
+	}
 
-#header2 {
+	#header2 {
 	background-color: #6a5acd;
 	color: white;
 	padding: 20px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center; /* Centraliza horizontalmente */
 	align-items: center;
-	text-align: center;
-}
+	}
 
-#main-content-wrapper2 {
-	display: flex;
-	flex-grow: 1;
-}
+    #main-content-wrapper2 {
+      display: flex;
+      flex-grow: 1;
+    }
 
-#content2 {
-	background-color: #90ee90;
-	flex-basis: 70%;
-	padding: 20px;
-	box-sizing: border-box;
-	text-align: center;
-}
+    #content2 {
+      background-color: #90ee90;
+      flex-basis: 70%;
+      padding: 20px;
+      box-sizing: border-box;
+	  justify-content: center; /* Centraliza horizontalmente */
+	  align-items: center; /* Centraliza verticalmente */
+	  display: flex;
+	  flex-direction: column;
+    }
 
-#sidebar2 {
-	background-color: #ffa07a;
-	flex-basis: 30%;
-	padding: 20px;
-	box-sizing: border-box;
-	text-align: center;
-}
+    #sidebar2 {
+      background-color: #ffa07a;
+      flex-basis: 30%;
+      padding: 160px;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      height: fit-content;
+    }
 
-#footer2 {
-	background-color: #cd5c5c;
-	padding: 15px;
-	text-align: center;
-	color: white;
-	font-weight: bold;
-}
+    #footer2 {
+      background-color: #cd5c5c;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }

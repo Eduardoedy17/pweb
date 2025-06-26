@@ -3,93 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Model e Posicionamentos</title>
+    <title>Box Model e Posicionamentos - Corrigido</title>
     <style>
-
         body {
             background: #61bd8c;
+            /* Adicionado position: relative para servir de contexto ao #absoluto */
+            position: relative; 
+            font-family: sans-serif;
+        }
+
+        /* Rótulo "Container body" */
+        #body-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bold;
+            color: #333;
         }
 
         #conteudo {
             background: #FFFFFF;
             padding: 10px;
-            width: 900px;
-            margin: 30px auto;
-         }
+            width: 500px;
+            /* A margem empurra o container para a direita */
+            margin: 80px 50px 30px auto;
+            min-height: 250px; /* Garante altura mínima */
+            position: relative; /* Contexto para o rótulo "Container div" */
+        }
+
+        /* Rótulo "Container div" */
+        #div-label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
 
         .caixa {
-            background: red; /* Cor padrão das caixas de exemplo */
+            background: red;
             margin: 10px;
             width: 100px;
             height: 100px;
             color: #FFFFFF;
+            /* Centraliza o texto dentro da caixa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            text-align: center; /* Garante alinhamento do texto */
         }
 
-        /* Posicionamento Relativo */
+        /* Posicionamento Relativo (dentro do #conteudo) */
         #relativo {
             position: relative;
-            left: 30px; /* Desloca 30px da posição normal à esquerda */
+            /* Deslocado em relação à sua posição original */
+            top: 10px;
+            left: 20px;
         }
 
-        /* Posicionamento Absoluto */
+        /* Posicionamento Absoluto (em relação ao body) */
         #absoluto {
-            position: absolute; /* Posicionado em relação ao pai mais próximo com position: relative */
-            left: 150px;
+            position: absolute;
+            top: 250px;
+            left: 80px;
         }
 
-        /* Posicionamento Fixo */
+        /* Posicionamento Fixo (em relação à janela do navegador) */
         #fixo {
-            position: fixed; /* Posicionado em relação à viewport (janela do navegador) */
-            right: 200px; /* 20px da borda direita da janela */
-            top: 0px; /* 20px da borda superior da janela */
+            position: fixed;
+            top: 80px;
+            left: 200px;
         }
 
-        /* Estilo específico para a caixa do link do exercício */
-        #link-exercicio { /* Novo ID para a caixa do link */
+        /* --- ESTILOS DO LINK DO EXERCÍCIO PRESERVADOS --- */
+        #link-exercicio {
             background: #007bff; /* Azul vibrante para o link */
             color: white;
             width: 200px; /* Mais largo para o texto do link */
             height: auto; /* Altura automática para se ajustar ao conteúdo */
+            padding: 15px; /* Espaçamento interno */
             position: relative; /* Mantém no fluxo normal, mas pode ser movido */
             left: 25%; /* Tenta centralizar a caixa dentro do #conteudo */
             border: 1px solid #0056b3;
+            /* Remove a margem padrão da classe .caixa para melhor controle */
+            margin-top: 30px; 
+        }
+
+        #link-exercicio a {
+            color: white;
+            text-decoration: none;
         }
 
         #link-exercicio a:hover {
             text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
         }
 
-        /* Estilos para o texto "Container body" e "Container div" */
-        span {
-            display: block; /* Para que o span ocupe uma linha inteira e o margin-top funcione */
-            text-align: center;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #333;
-        }
     </style>
 </head>
 <body>
 
-    <span>Container body</span>
+    <span id="body-label">Container body</span>
+
+    <div id="fixo" class="caixa">
+        Fixo
+    </div>
+
+    <div id="absoluto" class="caixa">
+        Absoluto
+    </div>
 
     <div id="conteudo">
-        Container div
+        <span id="div-label">Container div</span>
 
         <div id="relativo" class="caixa">
             Relativo
         </div>
-
-        <div id="absoluto" class="caixa">
-            Absoluto
-        </div>
-
-        <div id="fixo" class="caixa">
-            Fixo
-        </div>
-
+        
         <div id="link-exercicio" class="caixa">
-            <p><a target="_blank" href="../09.2/index.html">Exercício de Layout</a></p>
+             <a target="_blank" href="../09.2/index.html">Exercício de Layout</a>
         </div>
     </div>
 
