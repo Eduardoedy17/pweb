@@ -1,71 +1,67 @@
-html, body {
-      margin: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
+/* Define o estilo para o corpo da página */
+body {
+	margin: 0; /* Remove a margem externa padrão do corpo */
+	padding: 0; /* Remove o preenchimento interno padrão do corpo */
+	height: 1000px; /* Define uma altura fixa para o corpo da página, útil para demonstração de rolagem */
+}
 
-    #layout2 {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 1024px;
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      flex: 1;
-    }
+/* Define o estilo para a barra de menu principal */
+div#main {
+	background-color: #2c3e50; /* Define a cor de fundo para um azul escuro */
+	color: #ecf0f1; /* Define a cor do texto para um branco acinzentado */
+	text-align: center; /* Centraliza o texto horizontalmente */
+	height: 50px; /* Define a altura do elemento */
+	line-height: 50px; /* Centraliza o texto verticalmente alinhando a altura da linha com a altura do elemento */
+}
 
-	#menu2 {
-	background-color: #cd5c5c;
-	padding: 10px;
-	color: white;
-	font-weight: bold;
-	text-align: center;
-	display: flex;
-	justify-content: center; /* Centraliza horizontalmente */
-	}
+/* Define o estilo para o cabeçalho */
+div#header {
+	background-color: #34495e; /* Define a cor de fundo para um azul um pouco mais claro */
+	color: #ecf0f1; /* Define a cor do texto para um branco acinzentado */
+	text-align: center; /* Centraliza o texto horizontalmente */
+	height: 100px; /* Define a altura do elemento */
+	line-height: 100px; /* Centraliza o texto verticalmente */
+}
 
-	#header2 {
-	background-color: #6a5acd;
-	color: white;
-	padding: 20px;
-	display: flex;
-	justify-content: center; /* Centraliza horizontalmente */
-	align-items: center;
-	}
+/* Define o estilo para o contêiner do conteúdo principal */
+div#main-content {
+	width: 100%; /* Faz o contêiner ocupar 100% da largura disponível */
+}
 
-    #main-content-wrapper2 {
-      display: flex;
-      flex-grow: 1;
-    }
+/* Define o estilo para a seção de conteúdo à esquerda */
+div#esquerda {
+	background-color: #1abc9c; /* Define a cor de fundo para um verde-azulado */
+	width: 70%; /* Define a largura para ocupar 70% do espaço do elemento pai */
+	height: 400px; /* Define a altura do elemento */
+	float: left; /* Faz o elemento flutuar à esquerda, permitindo que outros elementos fiquem ao seu lado */
+	color: #fff; /* Define a cor do texto para branco */
+	text-align: center; /* Centraliza o texto horizontalmente */
+	line-height: 400px; /* Centraliza o texto verticalmente */
+}
 
-    #content2 {
-      background-color: #90ee90;
-      flex-basis: 70%;
-      padding: 20px;
-      box-sizing: border-box;
-	  justify-content: center; /* Centraliza horizontalmente */
-	  align-items: center; /* Centraliza verticalmente */
-	  display: flex;
-	  flex-direction: column;
-    }
+/* Define o estilo para a barra lateral direita */
+div#direita {
+	background-color: #16a085; /* Define a cor de fundo para um verde mais escuro */
+	width: 30%; /* Define a largura para ocupar 30% do espaço do elemento pai */
+	height: 400px; /* Define a altura do elemento */
+	float: right; /* Faz o elemento flutuar à direita */
+	color: #fff; /* Define a cor do texto para branco */
+	text-align: center; /* Centraliza o texto horizontalmente */
+	line-height: 400px; /* Centraliza o texto verticalmente */
+	position: fixed; /* Fixa a posição do elemento em relação à janela de visualização (viewport) */
+	right: 0; /* Alinha o elemento à direita da janela de visualização */
+}
 
-    #sidebar2 {
-      background-color: #ffa07a;
-      flex-basis: 30%;
-      padding: 160px;
-      box-sizing: border-box;
-      position: sticky;
-      top: 0;
-      align-self: flex-start;
-      height: fit-content;
-    }
+/* Elemento para limpar a flutuação dos elementos anteriores */
+div#segura-altura {
+	clear: both; /* Impede que elementos posteriores flutuem ao lado dos elementos anteriores que usam 'float' */
+}
 
-    #footer2 {
-      background-color: #cd5c5c;
-      padding: 15px;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-    }
+/* Define o estilo para o rodapé */
+div#footer {
+	background-color: #2c3e50; /* Define a cor de fundo para a mesma cor do menu principal, criando consistência */
+	height: 50px; /* Define a altura do elemento */
+	text-align: center; /* Centraliza o texto horizontalmente */
+	line-height: 50px; /* Centraliza o texto verticalmente */
+	color: #ecf0f1; /* Define a cor do texto para um branco acinzentado */
+}

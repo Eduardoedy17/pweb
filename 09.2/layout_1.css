@@ -1,78 +1,82 @@
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
+/* Seletor universal: aplica esta regra a TODOS os elementos da página */
+* {
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura e altura total do elemento, facilitando o cálculo de layouts */
+}
 
-    #layout1 {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 960px;
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      flex: 1;
-    }
+/* Estilo para o corpo da página */
+body {
+    margin: 0;      /* Remove a margem externa padrão do navegador */
+    padding: 0;     /* Remove o preenchimento interno padrão do navegador */
+    overflow: auto; /* Adiciona barras de rolagem se o conteúdo exceder o tamanho da tela */
+}
 
-    #header1 {
-      background-color: #6a5acd;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-    }
+/* Estilo para o cabeçalho */
+#header {
+    background-color: #2c3e50; /* Define a cor de fundo para um azul bem escuro */
+    text-align: right;        /* Alinha o texto à direita dentro do cabeçalho */
+    padding: 25px 150px;      /* Adiciona preenchimento: 25px em cima/baixo e 150px nas laterais */
+    width: 100%;              /* Faz o cabeçalho ocupar 100% da largura da tela */
+    height: 100px;            /* Define uma altura fixa de 100 pixels */
+    position: fixed;          /* Fixa o cabeçalho no topo da página, ele não se move com a rolagem */
+    top: 0;                   /* Posiciona o cabeçalho no topo da janela de visualização */
+    left: 0;                  /* Posiciona o cabeçalho na borda esquerda da janela de visualização */
+    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+}
 
-    #menu1 {
-      background-color: #f08080;
-      padding: 10px;
-      display: flex;
-      justify-content: space-around;
-      color: white;
-    }
+/* Estilo para a barra de menu */
+#menu {
+    background-color: #34495e; /* Define a cor de fundo para um cinza-azulado */
+    margin-top: 100px;        /* Adiciona uma margem no topo para não ficar embaixo do cabeçalho fixo */
+    padding: 8px 100px;       /* Adiciona preenchimento: 8px em cima/baixo e 100px nas laterais */
+    text-align: center;       /* Centraliza o texto dentro da barra de menu */  
+}
 
-    #content-wrapper1 {
-      display: flex;
-      flex-grow: 1;
-    }
+/* Contêiner principal para as colunas de conteúdo */
+#principal {
+    height: 450px; /* Define uma altura fixa para a área principal */
+}
 
-    #left-col1 {
-      background-color: #ffd700;
-      flex-basis: 25%;
-      padding: 15px;
-      box-sizing: border-box;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center; /* Centraliza verticalmente */
-      display: flex;
-      flex-direction: column;
-    }
+/* Regra de estilo que se aplica a todas as três colunas (esquerda, centro e direita) */
+#left, #center, #right {
+    float: left;        /* Faz com que as colunas fiquem lado a lado, flutuando à esquerda */
+    padding-left: 20px; /* Adiciona um preenchimento interno à esquerda de 20px */
+    padding-top: 50px;  /* Adiciona um preenchimento interno no topo de 50px */
+    text-align: center; /* Centraliza o texto dentro de cada coluna */
+    align-items: center;
+}
 
-    #center-col1 {
-      background-color: #90ee90;
-      flex-basis: 50%;
-      padding: 15px;
-      box-sizing: border-box;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center; /* Centraliza verticalmente */
-      display: flex;
-      flex-direction: column;
-    }
+/* Estilo para a coluna da esquerda */
+#left {
+    width: 25%;               /* Define a largura para ocupar 25% do espaço do contêiner pai */
+    background-color: #ecf0f1; /* Define a cor de fundo para um cinza bem claro */
+    height: 500px;            /* Define uma altura fixa de 500 pixels */
+    text-align: center; /* Centraliza o texto dentro da coluna */
+    align-items: center;
+}
 
-    #right-col1 {
-      background-color: #ffa07a;
-      flex-basis: 25%;
-      padding: 15px;
-      box-sizing: border-box;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center; /* Centraliza verticalmente */
-      display: flex;
-      flex-direction: column;
-    }
+/* Estilo para a coluna central */
+#center {
+    background-color: #bdc3c7; /* Define a cor de fundo para um cinza prateado */
+    width: 50%;               /* Define a largura para ocupar 50% do espaço do contêiner pai */
+    height: 500px;            /* Define uma altura fixa de 500 pixels */
+    align-items: center;
+}
 
-    #footer1 {
-      background-color: #87ceeb;
-      padding: 15px;
-      text-align: center;
-      color: white;
-    }
+/* Estilo para a coluna da direita */
+#right {
+    background-color: #95a5a6; /* Define a cor de fundo para um cinza mais escuro */
+    width: 25%;               /* Define a largura para ocupar 25% do espaço do contêiner pai */
+    height: 500px;            /* Define uma altura fixa de 500 pixels */
+    text-align: center; /* Centraliza o texto dentro da coluna */
+    align-items: center;
+}
+
+/* Estilo para o rodapé */
+#footer {
+    clear: both;              /* Limpa a flutuação (float) das colunas acima, garantindo que o rodapé fique abaixo delas */
+    background-color: #2c3e50; /* Define a cor de fundo para a mesma do cabeçalho, criando consistência */
+    height: 50px;             /* Define uma altura fixa de 50 pixels */
+    padding: 10px 40px;       /* Adiciona preenchimento: 10px em cima/baixo e 40px nas laterais */
+    text-align: center;       /* Centraliza o texto dentro do rodapé */
+    align-items: center;
+}

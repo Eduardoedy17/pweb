@@ -1,85 +1,256 @@
-/* --- CONFIGURAÇÕES GERAIS --- */
+/* CSS Reset e Configuração Básica */
 * {
-    /* Garante que padding e border não alterem a largura final do elemento */
+    /* O seletor universal '*' aplica estas regras a TODOS os elementos da página. */
     box-sizing: border-box;
+    /* Faz com que padding e border não aumentem a largura/altura final do elemento. */
+    margin: 0;
+    /* Remove todas as margens externas padrão. */
+    padding: 0;
+    /* Remove todas as margens internas (preenchimento) padrão. */
 }
 
 body {
-    background-color: #333; /* Fundo escuro para a página */
-    font-family: monospace;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 2rem; /* Espaçamento nas bordas da página */
+    /* Estilos aplicados ao corpo (<body>) da página. */
+    font-family: "Montserrat", sans-serif;
+    /* Define a fonte principal da página. */
+    background: #f5f5f5;
+    /* Define uma cor de fundo cinza claro. */
 }
 
-/* --- ESTILO BASE DOS BLOCOS --- */
-.box {
-    background-color: #4F4F4F;
-    border: 2px solid #666;
-    border-radius: 12px;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.clearfix::after {
+    /* Classe utilitária para limpar floats. Garante que o contêiner se expanda para conter os elementos flutuantes. */
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* --- ESTRUTURA PRINCIPAL DO LAYOUT (Container) --- */
-.container {
-    display: flex;
-    flex-direction: column; /* Organiza os filhos em coluna: header, middle-section, footer */
-    gap: 1rem; /* Espaço entre os elementos principais */
-    max-width: 1400px;
-    margin: auto; /* Centraliza o container na página */
-}
-
-/* Seção do meio (Nav, Main, Aside) */
-.middle-section {
-    display: flex;
-    flex-direction: row; /* Organiza os filhos em linha */
-    gap: 1rem; /* Espaço entre nav, main e aside */
-}
-
-/* --- TAMANHO DOS BLOCOS PRINCIPAIS --- */
-header, footer {
-    min-height: 100px;
-}
-
-nav, aside {
-    flex-basis: 18%; /* Define a largura base das colunas laterais */
-    min-height: 500px;
-}
-
-main {
-    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
-}
-
-
-/* --- ESTRUTURA DO CONTEÚDO PRINCIPAL (Main) --- */
-.main-content {
-    display: grid;
-    /* Cria um grid 2x2 */
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem; /* Espaço entre as 4 seções */
-    padding: 1rem;
-}
-
-.inner-section {
-    display: flex;
-    flex-direction: column; /* Organiza header, article, footer da seção em coluna */
-    gap: 0.5rem; /* Espaço entre eles */
-    padding: 0.5rem;
-    border-color: #777;
-}
-
-/* --- ESTILO DOS SUB-BLOCOS DENTRO DE CADA SEÇÃO --- */
-.sub-box {
-    background-color: #5A5A5A;
-    border-color: #888;
-    border-radius: 8px;
+/* Estilização do Cabeçalho */
+header#cabecalho {
+    background: #02303b;
+    /* Cor de fundo azul escuro. */
     width: 100%;
+    /* Largura total da tela. */
+    height: 60px;
+    /* Altura fixa de 60 pixels. */
+    text-align: center;
+    /* Alinha o texto ao centro. */
+    line-height: 60px;
+    /* Centraliza o texto verticalmente (igual à altura). */
+    color: #fff;
+    /* Cor do texto: branco. */
+    font-size: 1.2em;
+    /* Tamanho da fonte. */
+    position: fixed;
+    /* Posição fixa: fica sempre visível no topo, mesmo com a rolagem. */
+    top: 0;
+    /* Ancorado no topo da tela. */
+    left: 0;
+    /* Ancorado na esquerda da tela. */
+    z-index: 100;
+    /* Garante que o cabeçalho fique acima de outros elementos. */
 }
 
-.article-box {
-    flex-grow: 1; /* Faz o <article> ocupar o espaço vertical restante na seção */
+/* Estilização da Navegação Lateral Esquerda */
+nav#navegacao {
+    width: 180px;
+    /* Largura fixa de 180 pixels. */
+    height: 100%;
+    /* Altura total da tela. */
+    background: #02303b;
+    /* Mesma cor de fundo do cabeçalho. */
+    position: fixed;
+    /* Posição fixa na lateral. */
+    top: 60px;
+    /* Começa abaixo do cabeçalho (que tem 60px de altura). */
+    left: 0;
+    /* Ancorado na esquerda. */
+    padding: 20px;
+    /* Espaçamento interno. */
+    z-index: 100;
+    /* Garante que fique sobre outros elementos. */
+}
+
+#navegacao ul {
+    list-style: none;
+    /* Remove os marcadores (bolinhas) da lista. */
+}
+
+#navegacao ul li {
+    margin-bottom: 30px;
+    /* Espaço abaixo de cada item da lista. */
+    text-align: center;
+    /* Alinha o texto ao centro. */
+}
+
+#navegacao a {
+    text-decoration: none;
+    /* Remove o sublinhado dos links. */
+    color: #f5f5f5;
+    /* Cor do texto: branco acinzentado. */
+    font-size: 1.1em;
+    /* Tamanho da fonte. */
+    padding: 10px;
+    /* Espaçamento interno para criar uma área de clique maior. */
+    display: block;
+    /* Faz o link ocupar toda a largura do item da lista. */
+    border-radius: 5px;
+    /* Bordas levemente arredondadas. */
+    transition: background-color 0.3s;
+    /* Efeito de transição suave para a cor de fundo. */
+}
+
+#navegacao a:hover {
+    /* Estilo do link quando o mouse está sobre ele. */
+    background: #034b5c;
+    /* Cor de fundo levemente mais clara para indicar seleção. */
+}
+
+/* Área de Conteúdo Principal */
+main.area-conteudo {
+    /* Margens para evitar que o conteúdo principal fique escondido sob os elementos fixos. */
+    margin-top: 60px;
+    /* Espaço no topo para não ficar sob o cabeçalho. */
+    margin-left: 200px;
+    /* Espaço na esquerda para não ficar sob a navegação. */
+    margin-right: 320px;
+    /* Espaço na direita para não ficar sob a publicidade. */
+    margin-bottom: 30px;
+    /* Espaço embaixo para não ficar sob o rodapé. */
+    padding: 20px;
+    /* Espaçamento interno para o conteúdo "respirar". */
+}
+
+#area-postagens {
+    width: 100%;
+    /* Ocupa toda a largura disponível dentro da 'main.area-conteudo'. */
+}
+
+/* Estilização de Cada Postagem Individual */
+.postagem {
+    padding: 20px;
+    /* Espaçamento interno. */
+    margin-bottom: 20px;
+    /* Espaço entre as postagens. */
+    background: #fff;
+    /* Fundo branco. */
+    border-radius: 5px;
+    /* Bordas arredondadas. */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para dar profundidade. */
+}
+
+.postagem h2 {
+    color: #02303b;
+    /* Cor do título da postagem (mesma do cabeçalho). */
+    margin-bottom: 10px;
+    /* Espaço abaixo do título. */
+}
+
+.postagem img {
+    width: 220px;
+    /* Largura fixa da imagem. */
+    height: 124px;
+    /* Altura fixa da imagem. */
+    object-fit: cover;
+    /* Garante que a imagem cubra a área sem distorcer. */
+    float: left;
+    /* Flutua a imagem para a esquerda, permitindo que o texto a contorne. */
+    margin-right: 15px;
+    /* Espaço à direita da imagem para separá-la do texto. */
+    margin-bottom: 5px;
+    /* Espaço abaixo da imagem. */
+    border-radius: 5px;
+    /* Bordas arredondadas. */
+}
+
+p {
+    padding-bottom: 10px;
+    /* Espaço abaixo de cada parágrafo. */
+    text-align: justify;
+    /* Alinhamento justificado para o texto do parágrafo. */
+    line-height: 1.6;
+    /* Altura da linha, para melhor legibilidade. */
+}
+
+.data {
+    font-size: 0.8em;
+    /* Tamanho de fonte pequeno. */
+    color: #666;
+    /* Cor de texto cinza. */
+    border-bottom: 1px solid #eee;
+    /* Linha sutil de separação abaixo da data. */
+    padding-bottom: 10px;
+    /* Espaçamento abaixo da data. */
+    margin-bottom: 15px;
+    /* Margem abaixo da linha de separação. */
+    display: block;
+    /* Faz com que ocupe a linha inteira. */
+}
+
+.autor {
+    font-size: 0.9em;
+    /* Tamanho da fonte. */
+    font-style: italic;
+    /* Estilo de fonte itálico. */
+    border-left: 4px solid #ccc;
+    /* Barra cinza à esquerda do nome do autor. */
+    padding-left: 10px;
+    /* Espaçamento à esquerda do texto do autor. */
+    margin-top: 15px;
+    /* Espaço acima do nome do autor. */
+    color: #555;
+    /* Cor de texto cinza escuro. */
+    clear: both;
+    /* Limpa o 'float' da imagem, garantindo que o autor apareça abaixo dela. */
+}
+
+/* Barra Lateral Direita (Publicidade) */
+#area-lateral-direita {
+    position: fixed;
+    /* Posição fixa na tela. */
+    top: 60px;
+    /* Começa abaixo do cabeçalho. */
+    right: 0;
+    /* Ancorado na direita. */
+    width: 300px;
+    /* Largura fixa. */
+    height: calc(100% - 90px);
+    /* Altura total menos a altura do cabeçalho e rodapé. */
+    background: #fff;
+    /* Fundo branco. */
+    padding: 20px;
+    /* Espaçamento interno. */
+}
+
+#area-lateral-direita img {
+    width: 100%;
+    /* Imagem ocupa toda a largura da barra lateral. */
+    height: 90%;
+    /* Altura se ajusta automaticamente para manter a proporção. */
+    display: block;
+    /* Remove espaços extras abaixo da imagem. */
+}
+
+/* Estilização do Rodapé */
+footer#rodape {
+    text-align: center;
+    /* Alinha o texto ao centro. */
+    background: #02303b;
+    /* Cor de fundo igual ao cabeçalho. */
+    color: #fff;
+    /* Cor do texto: branco. */
+    height: 30px;
+    /* Altura fixa. */
+    line-height: 30px;
+    /* Centraliza o texto verticalmente. */
+    position: fixed;
+    /* Posição fixa na parte inferior da tela. */
+    bottom: 0;
+    /* Ancorado na base da tela. */
+    width: 100%;
+    /* Largura total. */
+    z-index: 100;
+    /* Garante que fique sobre outros elementos. */
+    font-size: 0.9em;
+    /* Tamanho da fonte. */
 }
