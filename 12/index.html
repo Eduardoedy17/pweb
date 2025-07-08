@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Atributo Data</title>
+
+<script type="text/javascript">
+
+	function mostravalor(componente){
+		var valor = componente.getAttribute('data-idade');
+		alert(valor);
+	}
+
+</script>
+
+    <style>
+        .pessoa {
+            color: red; /* Define a cor padrão para todos como vermelho */
+            cursor: pointer; /* Muda o cursor para uma mãozinha, indicando que é clicável */
+        }
+
+        /*
+           AGORA ESTE SELETOR FUNCIONA!
+           Ele procura um elemento com a classe 'pessoa' QUE TAMBÉM TENHA
+           o atributo 'data-idade' com o valor exatamente igual a "30".
+        */
+        .pessoa[data-idade="30"] {
+            color: blue;
+        }
+
+        .pessoa::before {
+            content: 'Nome: ';
+        }
+        
+        /*
+           AGORA PODEMOS MOSTRAR A IDADE COM CSS!
+           Usamos a função attr() para pegar o valor do atributo e exibi-lo.
+        */
+        .pessoa::after {
+            content: ' - Idade: ' attr(data-idade) ' Anos';
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Atributo data-*</h1>
+    </header>
+
+    <ul>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="20">João</li>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="30">José</li>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="40">Maria</li>
+    </ul>
+</body>
+</html>
