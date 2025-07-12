@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transition & Animation</title>
+    <link rel="stylesheet" href="normalize.css">
+</head>
+
+    <style>
+        body {
+            /* Adicionado display:flex para alinhar os itens filhos lado a lado */
+            display: flex;
+
+            /* Centraliza o grupo de caixas na horizontal e vertical */
+            justify-content: center;
+            align-items: center;
+
+            /* Garante que o body ocupe a altura toda da tela para a centralização vertical */
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            position: relative;
+            left: 10px;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: minhaAnimacao;
+            /*animation-duration: 5s;
+            animation-delay: 3s;
+            animation-iteration-count: 3;*/
+            animation: minhaAnimacao 5s 3s 3;
+        }
+
+        .box:hover {
+            border: solid 5px black;
+            transition: border 3s 2s;
+        }
+
+        @keyframes minhaAnimacao {
+            from {
+                left: 10px;
+            }
+            to {
+                left: 50px;
+                background: blue;
+                border-radius: 100px;
+            }
+        }
+
+
+        /* Estilo para a seção do link do exercício */
+        .exercicio {
+            position: absolute; /* Posicionamento fixo em relação à página */
+            bottom: 30px; /* Distância da parte inferior */
+            right: 50px; /* Distância da parte direita */
+            color: #555;
+            font-size: 20px;
+        }
+        
+        .exercicio a {
+            color: #007BFF; /* Cor azul para o link */
+            text-decoration: none; /* Remove o sublinhado padrão */
+            font-weight: bold;
+            transition: color 0.3s; /* Efeito suave na mudança de cor */
+        }
+        
+        .exercicio a:hover {
+            color: #0056b3; /* Escurece o link ao passar o mouse */
+            text-decoration: underline; /* Adiciona o sublinhado no hover */
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <main>
+        <div class="box"></div>
+    </main>
+    
+    <div class="exercicio">
+        <p><a target="_blank" href="./exercicio.html">Exercício</a> - Transition & Animation</p>
+    </div>
+
+</body>
+</html>

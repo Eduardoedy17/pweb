@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gradientes: Linear e Radial</title>
+    <link rel="stylesheet" href="normalize.css">
+</head>
+
+    <style>
+        body {
+            /* Adicionado display:flex para alinhar os itens filhos lado a lado */
+            display: flex;
+
+            /* Centraliza o grupo de caixas na horizontal e vertical */
+            justify-content: center;
+            align-items: center;
+
+            /* Garante que o body ocupe a altura toda da tela para a centralização vertical */
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            background: linear-gradient(to top left, yellow, red);
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .box-gradiente {
+            /*
+            * A função linear-gradient() cria o efeito:
+            * 'to top right' define a direção da diagonal (do inferior-esquerdo para o superior-direito).
+            * As cores são listadas na ordem em que devem aparecer ao longo do gradiente.
+            */
+            background: linear-gradient(to top right, cyan, magenta, lime, red);
+        }
+
+        .box-gradiente-radial {
+            width: 1000px;
+            /*
+            * A função radial-gradient() cria o efeito:
+            * 'ellipse' define a forma do gradiente para que seja oval.
+            * As cores (red, yellow, green) são listadas do centro para fora.
+            */
+            background: radial-gradient(ellipse, red, yellow, green);
+        }
+
+        .box h1 {
+            background: rgb(255, 255, 255, 0.5);
+            text-shadow: 3px 3px 3px orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Lorem Ipsum?</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Tenetur ratione sit dolores animi explicabo dolorem eaque iusto obcaecati consectetur in, molestiae
+            sed atque distinctio veniam. Vero culpa voluptate beatae quia. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Rem rerum qui amet consectetur minus sunt fugiat reprehenderit vitae inventore ullam
+            impedit ad est eum omnis tempore, dignissimos, a corporis error?
+        </p>
+    </div>
+
+    <div class="box box-gradiente">
+        <h1>Gradiente Linear</h1>
+    </div>
+
+    <div class="box box-gradiente-radial">
+        <h1>Gradiente Radial</h1>
+    </div>
+
+</body>
+
+</html>

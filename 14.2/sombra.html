@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transparências Sombras Gradientes</title>
+    <link rel="stylesheet" href="normalize.css">
+</head>
+
+<style>
+        /* Estilo para centralizar o conteúdo na página */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+        }
+
+        /* Contêiner para alinhar as duas caixas lado a lado */
+        .container {
+            display: flex;
+            gap: 40px; /* Espaço entre as caixas */
+        }
+
+        /* Estilo base comum para as duas caixas */
+        .box {
+            width: 500px;
+            height: 200px;
+            border-radius: 10px; /* Cantos arredondados */
+            border: 3px dashed white; /* Borda interna branca e tracejada */
+            color: white; /* Cor do texto */
+            font-size: 24px;
+            font-weight: bold;
+            /* Centraliza o texto dentro da caixa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            /* NOVO ESTILO - Aplicado SOMENTE à caixa com a classe .box-button.
+      Ele é mais escuro e tem propriedades para parecer um botão.
+    */
+    .box-button {
+        background: #03310b; /* Cor de fundo escura, de botão */
+        color: #fff; /* Cor do texto branca para contraste */
+        cursor: pointer;
+        
+        /* Centraliza o conteúdo verticalmente e horizontalmente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Efeito de transição suave para o hover */
+        transition: background-color 0.3s, transform 0.2s;
+        }
+
+        /* Efeito ao passar o mouse SOMENTE no botão */
+        .box-button:hover {
+            background: #555; /* Clareia o fundo */
+            transform: translateY(-3px); /* Leve elevação */
+        }
+
+        /* Ajuste para a legenda dentro do botão */
+        .box-button fieldset {
+            border-color: #666;
+        }
+
+        .box-button legend {
+        color: #fff;
+        font-weight: bold;
+        }
+
+        /* Estilo específico para a primeira caixa de sombra */
+        .shadow-1 {
+            background-color: #e59a9a; /* Cor de fundo rosa/vermelho */
+            /* Sombra difusa, sem deslocamento, com 20px de desfoque e cor preta com 30% de opacidade */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Estilo específico para a segunda caixa de sombra */
+        .shadow-2 {
+            background-color: #f1e4a2; /* Cor de fundo amarela */
+            /* Sombra deslocada 8px para a direita e 8px para baixo, com 15px de desfoque */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box shadow-1">
+            Shadow 1
+        </div>
+
+        <div class="box shadow-2">
+            Shadow 2
+        </div>
+    </div>
+
+    <div class="box box-button" onclick="window.open('./gradiente.html', '_blank')" style="margin: 30px;">
+        <fieldset>
+            <legend>Exercício - Gradientes</legend>
+            <p style="text-align: center;">LINEAR | RADIAL</p>
+        </fieldset>
+    </div>
+
+</body>
+</html>

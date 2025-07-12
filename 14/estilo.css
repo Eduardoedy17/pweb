@@ -1,0 +1,46 @@
+.box{
+    background: url(./camera.png);
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.box h1 {
+    background: rgb(255, 255, 255, 0.5);
+    text-shadow: 3px 3px 3px orange;
+}
+
+    /* NOVO ESTILO - Aplicado SOMENTE à caixa com a classe .box-button.
+      Ele é mais escuro e tem propriedades para parecer um botão.
+    */
+    .box-button {
+        background: #03310b; /* Cor de fundo escura, de botão */
+        color: #fff; /* Cor do texto branca para contraste */
+        cursor: pointer;
+        
+        /* Centraliza o conteúdo verticalmente e horizontalmente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Efeito de transição suave para o hover */
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /* Efeito ao passar o mouse SOMENTE no botão */
+    .box-button:hover {
+        background: #555; /* Clareia o fundo */
+        transform: translateY(-3px); /* Leve elevação */
+    }
+
+    /* Ajuste para a legenda dentro do botão */
+    .box-button fieldset {
+        border-color: #666;
+    }
+
+    .box-button legend {
+       color: #fff;
+       font-weight: bold;
+    }

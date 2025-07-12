@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício - Animação & Transições</title>
+    <style>
+        body {
+            /* Usado para centralizar a 'box' na tela, conforme solicitado no exercício */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #d9534f; /* Cor inicial */
+
+            /*
+             * Aplica a animação usando a propriedade 'animation'.
+             * O nome da animação é 'girar-e-colorir'.
+             * A duração é 40s (para cada 25% do ciclo durar 10s).
+             * 'infinite' faz a animação repetir (similar a 'animation-iteration-count' ).
+             * 'linear' mantém a velocidade constante.
+            */
+            animation: girar-e-colorir 40s infinite linear;
+        }
+
+        /*
+         * A regra @keyframes especifica o código da animação. 
+         * Usamos porcentagens (ciclos) em vez de 'from' e 'to'. 
+        */
+        @keyframes girar-e-colorir {
+            /* Início do ciclo */
+            0% {
+                transform: rotate(0deg);
+                background-color: #d9534f; /* Vermelho */
+            }
+            /* Primeiro giro de 90° aos 10s */
+            25% {
+                transform: rotate(90deg);
+                background-color: #5bc0de; /* Azul */
+            }
+            /* Segundo giro de 90° aos 20s */
+            50% {
+                transform: rotate(180deg);
+                background-color: #5cb85c; /* Verde */
+            }
+            /* Terceiro giro de 90° aos 30s */
+            75% {
+                transform: rotate(270deg);
+                background-color: #f0ad4e; /* Laranja */
+            }
+            /* Fim do ciclo aos 40s, retornando ao estado inicial */
+            100% {
+                transform: rotate(360deg);
+                background-color: #d9534f; /* Vermelho */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
