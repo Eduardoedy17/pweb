@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Figuras CSS3</title>
+    <style>
+        body {
+            /* Inicia a estilização para o elemento <body>. */
+            display: flex;
+            /* Ativa o modo de layout flexível para o corpo da página. */
+            justify-content: center;
+            /* Centraliza os itens filhos horizontalmente no centro da página. */
+            align-items: center;
+            /* Centraliza os itens filhos verticalmente no centro da página. */
+            height: 100vh;
+            /* Define a altura do corpo como 100% da altura da tela (viewport height). */
+            background-color: #f0f0f0;
+            /* Define uma cor de fundo cinza claro para a página. */
+        }
+
+        /* Fecha o bloco de estilização do <body>. */
+
+        .flex-container {
+            /* Inicia a estilização para o contêiner que agrupa as figuras. */
+            display: flex;
+            /* Ativa o modo flexível para este contêiner, alinhando seus filhos em linha. */
+            gap: 50px;
+            /* Cria um espaço de 50 pixels entre as duas figuras. */
+        }
+
+        /* Fecha o bloco de estilização do .flex-container. */
+
+        /* --- Estilos para a Flor --- */
+        /* Comentário em CSS para organizar o código. */
+
+        .container-flor {
+            /* Inicia a estilização para o contêiner da flor. */
+            position: relative;
+            /* Define um contexto de posicionamento para os elementos filhos (as pétalas). */
+            width: 200px;
+            /* Define a largura do contêiner da flor como 200 pixels. */
+            height: 200px;
+            /* Define a altura do contêiner da flor como 200 pixels. */
+        }
+
+        /* Fecha o bloco de estilização do .container-flor. */
+
+        .petala {
+            /* Inicia a estilização base para todas as pétalas. */
+            width: 100px;
+            /* Define a largura de cada pétala como 100 pixels. */
+            height: 100px;
+            /* Define a altura de cada pétala como 100 pixels. */
+            position: absolute;
+            /* Define o posicionamento da pétala em relação ao seu pai (.container-flor). */
+        }
+
+        /* Fecha o bloco de estilização da .petala. */
+
+        .petala.superior-esquerda {
+            /* Estiliza a pétala específica na posição superior esquerda. */
+            background-color: red;
+            /* Define a cor de fundo como vermelha. */
+            top: 0;
+            /* Posiciona a pétala no topo do contêiner pai. */
+            left: 0;
+            /* Posiciona a pétala à esquerda do contêiner pai. */
+            border-radius: 100% 100% 0 100%;
+            /* Arredonda os cantos superior-esquerdo, superior-direito e inferior-esquerdo para criar a forma da pétala. */
+        }
+
+        /* Fecha o bloco de estilização desta pétala. */
+
+        .petala.superior-direita {
+            /* Estiliza a pétala específica na posição superior direita. */
+            background-color: orange;
+            /* Define a cor de fundo como laranja. */
+            top: 0;
+            /* Posiciona a pétala no topo do contêiner pai. */
+            right: 0;
+            /* Posiciona a pétala à direita do contêiner pai. */
+            border-radius: 100% 100% 100% 0;
+            /* Arredonda os cantos superior-esquerdo, superior-direito e inferior-direito para criar a forma da pétala. */
+        }
+
+        /* Fecha o bloco de estilização desta pétala. */
+
+        .petala.inferior-esquerda {
+            /* Estiliza a pétala específica na posição inferior esquerda. */
+            background-color: green;
+            /* Define a cor de fundo como verde. */
+            bottom: 0;
+            /* Posiciona a pétala na base do contêiner pai. */
+            left: 0;
+            /* Posiciona a pétala à esquerda do contêiner pai. */
+            border-radius: 100% 0 100% 100%;
+            /* Arredonda os cantos superior-esquerdo, inferior-direito e inferior-esquerdo para criar a forma da pétala. */
+        }
+
+        /* Fecha o bloco de estilização desta pétala. */
+
+        .petala.inferior-direita {
+            /* Estiliza a pétala específica na posição inferior direita. */
+            background-color: purple;
+            /* Define a cor de fundo como roxa. */
+            bottom: 0;
+            /* Posiciona a pétala na base do contêiner pai. */
+            right: 0;
+            /* Posiciona a pétala à direita do contêiner pai. */
+            border-radius: 0 100% 100% 100%;
+            /* Arredonda os cantos superior-direito, inferior-direito e inferior-esquerdo para criar a forma da pétala. */
+        }
+
+        /* Fecha o bloco de estilização desta pétala. */
+
+
+        /* --- Estilos para o Círculo --- */
+        /* Comentário em CSS para organizar o código. */
+
+        .container-circulo {
+            /* Inicia a estilização para o contêiner do círculo. */
+            position: relative;
+            /* Define um contexto de posicionamento para os elementos filhos (os quadrantes). */
+            width: 200px;
+            /* Define a largura do contêiner do círculo como 200 pixels. */
+            height: 200px;
+            /* Define a altura do contêiner do círculo como 200 pixels. */
+        }
+
+        /* Fecha o bloco de estilização do .container-circulo. */
+
+        .quadrante {
+            /* Inicia a estilização base para todos os quadrantes do círculo. */
+            width: 100px;
+            /* Define a largura de cada quadrante como 100 pixels. */
+            height: 100px;
+            /* Define a altura de cada quadrante como 100 pixels. */
+            position: absolute;
+            /* Define o posicionamento do quadrante em relação ao seu pai (.container-circulo). */
+        }
+
+        /* Fecha o bloco de estilização do .quadrante. */
+
+        .quadrante.superior-esquerdo {
+            /* Estiliza o quadrante específico na posição superior esquerda. */
+            background-color: red;
+            /* Define a cor de fundo como vermelha. */
+            top: 0;
+            /* Posiciona o quadrante no topo do contêiner pai. */
+            left: 0;
+            /* Posiciona o quadrante à esquerda do contêiner pai. */
+            border-top-left-radius: 100%;
+            /* Arredonda apenas o canto superior esquerdo para formar um quarto de círculo. */
+        }
+
+        /* Fecha o bloco de estilização deste quadrante. */
+
+        .quadrante.superior-direito {
+            /* Estiliza o quadrante específico na posição superior direita. */
+            background-color: orange;
+            /* Define a cor de fundo como laranja. */
+            top: 0;
+            /* Posiciona o quadrante no topo do contêiner pai. */
+            right: 0;
+            /* Posiciona o quadrante à direita do contêiner pai. */
+            border-top-right-radius: 100%;
+            /* Arredonda apenas o canto superior direito para formar um quarto de círculo. */
+        }
+
+        /* Fecha o bloco de estilização deste quadrante. */
+
+        .quadrante.inferior-esquerdo {
+            /* Estiliza o quadrante específico na posição inferior esquerda. */
+            background-color: green;
+            /* Define a cor de fundo como verde. */
+            bottom: 0;
+            /* Posiciona o quadrante na base do contêiner pai. */
+            left: 0;
+            /* Posiciona o quadrante à esquerda do contêiner pai. */
+            border-bottom-left-radius: 100%;
+            /* Arredonda apenas o canto inferior esquerdo para formar um quarto de círculo. */
+        }
+
+        /* Fecha o bloco de estilização deste quadrante. */
+
+        .quadrante.inferior-direito {
+            /* Estiliza o quadrante específico na posição inferior direita. */
+            background-color: purple;
+            /* Define a cor de fundo como roxa. */
+            bottom: 0;
+            /* Posiciona o quadrante na base do contêiner pai. */
+            right: 0;
+            /* Posiciona o quadrante à direita do contêiner pai. */
+            border-bottom-right-radius: 100%;
+            /* Arredonda apenas o canto inferior direito para formar um quarto de círculo. */
+        }
+
+        /* Fecha o bloco de estilização deste quadrante. */
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="container-flor">
+            <div class="petala superior-esquerda"></div>
+            <div class="petala superior-direita"></div>
+            <div class="petala inferior-esquerda"></div>
+            <div class="petala inferior-direita"></div>
+        </div>
+        <div class="container-circulo">
+            <div class="quadrante superior-esquerdo"></div>
+            <div class="quadrante superior-direito"></div>
+            <div class="quadrante inferior-esquerdo"></div>
+            <div class="quadrante inferior-direito"></div>
+        </div>
+    </div>
+</body>
+
+</html>
