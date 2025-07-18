@@ -1,0 +1,85 @@
+/* --- Estilos Gerais --- */
+
+/* Seleciona o corpo (body) do documento HTML */
+body { 
+    /* Adiciona um espaçamento interno de 15 pixels em todos os lados do corpo da página. */
+    padding: 15px; 
+    
+    /* Define a cor de fundo do corpo como um cinza claro (#eee). */
+    background: #eee; 
+    
+    /* Define a família de fontes para o texto. O navegador tentará usar Arial, se não encontrar, usará Helvetica e, por último, uma fonte padrão sem serifa. */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Seleciona todos os elementos com a classe "caixa" */
+.caixa {
+    /* Adiciona uma borda sólida de 1 pixel de espessura e cor cinza escuro (#666). */
+    border: solid 1px #666; 
+    
+    /* Adiciona um espaçamento interno de 5px (superior/inferior) e 10px (laterais). */
+    padding: 5px 10px;
+    
+    /* Adiciona um espaçamento externo (margem) de 40 pixels em todos os lados. */
+    margin: 40px;
+}
+
+/* Seleciona elementos <span> que estão dentro de um elemento com a classe "tamanhoTela" */
+.tamanhoTela span {
+    /* Define a cor do texto como cinza escuro (#666). */
+    color: #666;
+    
+    /* Esconde o elemento por padrão, fazendo com que ele não ocupe espaço na página. */
+    display: none;
+}
+
+
+/* --- Media Queries (Estilos Responsivos) --- */
+
+/* Inicia uma regra que só será aplicada em telas (screen) com largura MÁXIMA de 600 pixels. */
+@media screen and (max-width: 600px) {
+    
+    /* Para telas menores que 600px, seleciona elementos com a classe "teste" */
+    .teste {
+        /* e muda sua cor de fundo para rosa (#F9C). */
+        background: #F9C;
+    }
+
+    /* Seleciona o <span> com a classe "lt600" (less than 600) */
+    span.lt600 {
+        /* e o torna visível, exibindo-o como um bloco em linha. */
+        display: inline-block;
+    }
+}
+
+/* Inicia uma regra que só será aplicada em telas com largura MÍNIMA de 900 pixels. */
+@media screen and (min-width: 900px) {
+
+    /* Para telas maiores que 900px, seleciona elementos com a classe "teste" */
+    .teste {
+        /* e muda sua cor de fundo para laranja (#F90). */
+        background: #F90;
+    }
+
+    /* Seleciona o <span> com a classe "gt900" (greater than 900) */
+    span.gt900 {
+        /* e o torna visível. */
+        display: inline-block;
+    }
+}
+
+/* Inicia uma regra que será aplicada em telas com largura MÍNIMA de 600px E MÁXIMA de 900px. */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    
+    /* Para telas entre 600px e 900px, seleciona elementos com a classe "teste" */
+    .teste {
+        /* e muda sua cor de fundo para azul claro (#9CF). */
+        background: #9CF;
+    }
+
+    /* Seleciona o <span> com a classe "bt600-900" (between 600 and 900) */
+    span.bt600-900 {
+        /* e o torna visível. */
+        display: inline-block;
+    }
+}
