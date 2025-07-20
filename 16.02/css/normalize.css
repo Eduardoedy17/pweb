@@ -1,0 +1,446 @@
+/*! normalize.css v7.0.0 | Licença MIT | github.com/necolas/normalize.css */
+
+/* Documento
+   ========================================================================== */
+
+/**
+ * 1. Corrige a altura da linha em todos os navegadores.
+ * 2. Previne ajustes no tamanho da fonte após mudanças de orientação (retrato/paisagem)
+ * no IE no Windows Phone e no iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1. Define uma altura de linha padrão consistente (115% do tamanho da fonte). */
+  -ms-text-size-adjust: 100%; /* 2. Impede que o Internet Explorer ajuste o tamanho do texto automaticamente. */
+  -webkit-text-size-adjust: 100%; /* 2. Impede que navegadores baseados em WebKit (Chrome, Safari, etc.) ajustem o tamanho do texto. */
+}
+
+/* Seções
+   ========================================================================== */
+
+/**
+ * Remove a margem em todos os navegadores (uma decisão de design do autor).
+ */
+
+body {
+  margin: 0; /* Remove a margem padrão que os navegadores aplicam ao <body>. */
+}
+
+/**
+ * Garante a exibição correta como bloco no IE 9 e anteriores.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; /* Trata as tags semânticas do HTML5 como elementos de bloco para garantir compatibilidade com navegadores antigos. */
+}
+
+/**
+ * Corrige o tamanho da fonte e a margem em elementos <h1> dentro de
+ * <section> e <article> no Chrome, Firefox e Safari.
+ */
+
+h1 {
+  font-size: 2em; /* Define o tamanho da fonte do h1 para ser o dobro do tamanho da fonte do seu elemento pai. */
+  margin: 0.67em 0; /* Aplica uma margem superior e inferior consistente, corrigindo diferenças entre navegadores. */
+}
+
+/* Agrupamento de conteúdo
+   ========================================================================== */
+
+/**
+ * 1. Garante a exibição correta como bloco no IE 9 e anteriores.
+ * 2. Garante a exibição correta como bloco no IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block; /* Garante que esses elementos sejam tratados como blocos em navegadores antigos. */
+}
+
+/**
+ * Adiciona a margem correta no IE 8.
+ */
+
+figure {
+  margin: 1em 40px; /* Corrige a margem padrão do elemento <figure> no IE 8. */
+}
+
+/**
+ * 1. Adiciona o box-sizing correto no Firefox.
+ * 2. Mostra o conteúdo que transborda (overflow) no Edge e IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1. Garante que a largura e altura se apliquem apenas ao conteúdo, não incluindo padding ou borda. */
+  height: 0; /* 1. Impede que a borda adicione altura no Firefox. */
+  overflow: visible; /* 2. Garante que a linha horizontal (hr) seja visível mesmo se o conteúdo transbordar. */
+}
+
+/**
+ * 1. Corrige a herança e a escala do tamanho da fonte em todos os navegadores.
+ * 2. Corrige o dimensionamento estranho de 'em' em todos os navegadores.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1. Define uma família de fontes monoespaçada para código pré-formatado. */
+  font-size: 1em; /* 2. Corrige problemas de dimensionamento de fonte em vários navegadores. */
+}
+
+/* Semântica a nível de texto
+   ========================================================================== */
+
+/**
+ * 1. Remove o fundo cinza em links ativos no IE 10.
+ * 2. Remove falhas no sublinhado de links no iOS 8+ e Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1. Garante que o fundo seja transparente, removendo o fundo cinza do IE 10. */
+  -webkit-text-decoration-skip: objects; /* 2. Melhora a aparência do sublinhado em navegadores WebKit. */
+}
+
+/**
+ * 1. Remove a borda inferior no Chrome 57- e Firefox 39-.
+ * 2. Adiciona a decoração de texto correta no Chrome, Edge, IE, Opera e Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1. Remove uma borda inferior indesejada em abreviações com título. */
+  text-decoration: underline; /* 2. Adiciona um sublinhado padrão. */
+  text-decoration: underline dotted; /* 2. Substitui o sublinhado por um pontilhado, que é mais semanticamente correto para abreviações. */
+}
+
+/**
+ * Previne a aplicação duplicada de 'bolder' pela regra seguinte no Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit; /* Herda o peso da fonte do elemento pai para evitar conflitos. */
+}
+
+/**
+ * Adiciona o peso de fonte correto no Chrome, Edge e Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder; /* Define o peso da fonte como 'mais negrito' que o do elemento pai, garantindo a consistência. */
+}
+
+/**
+ * 1. Corrige a herança e a escala do tamanho da fonte em todos os navegadores.
+ * 2. Corrige o dimensionamento estranho de 'em' em todos os navegadores.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1. Define uma fonte monoespaçada para elementos de código, teclado e amostra. */
+  font-size: 1em; /* 2. Garante um tamanho de fonte consistente para esses elementos. */
+}
+
+/**
+ * Adiciona o estilo de fonte correto no Android 4.3-.
+ */
+
+dfn {
+  font-style: italic; /* Define o estilo da fonte como itálico para o elemento de definição <dfn>. */
+}
+
+/**
+ * Adiciona o fundo e a cor corretos no IE 9-.
+ */
+
+mark {
+  background-color: #ff0; /* Define a cor de fundo amarela para o texto marcado (<mark>). */
+  color: #000; /* Define a cor do texto como preta para o texto marcado. */
+}
+
+/**
+ * Adiciona o tamanho de fonte correto em todos os navegadores.
+ */
+
+small {
+  font-size: 80%; /* Define que o texto dentro de <small> tenha 80% do tamanho da fonte do seu pai. */
+}
+
+/**
+ * Previne que os elementos <sub> e <sup> afetem a altura da linha
+ * em todos os navegadores.
+ */
+
+sub,
+sup {
+  font-size: 75%; /* Define o tamanho da fonte para 75% para subscritos e sobrescritos. */
+  line-height: 0; /* Impede que esses elementos aumentem o espaçamento entre as linhas. */
+  position: relative; /* Permite o posicionamento vertical usando 'top' ou 'bottom'. */
+  vertical-align: baseline; /* Alinha o elemento com a linha de base do texto ao redor. */
+}
+
+sub {
+  bottom: -0.25em; /* Desloca o texto subscrito ligeiramente para baixo. */
+}
+
+sup {
+  top: -0.5em; /* Desloca o texto sobrescrito ligeiramente para cima. */
+}
+
+/* Conteúdo incorporado
+   ========================================================================== */
+
+/**
+ * Adiciona a exibição correta no IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block; /* Garante que áudio e vídeo sejam exibidos corretamente como blocos em linha. */
+}
+
+/**
+ * Adiciona a exibição correta no iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none; /* Esconde elementos de áudio que não possuem controles visíveis. */
+  height: 0; /* Garante que o elemento oculto não ocupe espaço vertical. */
+}
+
+/**
+ * Remove a borda em imagens dentro de links no IE 10-.
+ */
+
+img {
+  border-style: none; /* Remove a borda azul que o IE 10 adiciona a imagens que são links. */
+}
+
+/**
+ * Esconde o conteúdo que transborda (overflow) no IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden; /* Garante que gráficos SVG que não são o elemento raiz não mostrem conteúdo que transborda. */
+}
+
+/* Formulários
+   ========================================================================== */
+
+/**
+ * 1. Altera os estilos da fonte em todos os navegadores (decisão do autor).
+ * 2. Remove a margem no Firefox e Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1. Define uma fonte sans-serif padrão para elementos de formulário. */
+  font-size: 100%; /* 1. Garante que os elementos do formulário herdem o tamanho da fonte. */
+  line-height: 1.15; /* 1. Define uma altura de linha consistente. */
+  margin: 0; /* 2. Remove margens padrão que alguns navegadores adicionam a esses elementos. */
+}
+
+/**
+ * Mostra o conteúdo que transborda (overflow) no IE.
+ * 1. Mostra o conteúdo que transborda no Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible; /* Garante que botões e inputs não cortem o conteúdo que transborda. */
+}
+
+/**
+ * Remove a herança de transformação de texto no Edge, Firefox e IE.
+ * 1. Remove a herança de transformação de texto no Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none; /* Impede que botões e selects herdem a propriedade 'text-transform' (ex: tudo maiúsculo). */
+}
+
+/**
+ * 1. Previne um bug do WebKit onde (2) destrói os controles nativos de `audio` e `video` no Android 4.
+ * 2. Corrige a incapacidade de estilizar tipos clicáveis no iOS e Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2. Permite que botões sejam estilizados no iOS e Safari, resetando sua aparência padrão. */
+}
+
+/**
+ * Remove a borda interna e o preenchimento no Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none; /* Remove uma borda interna que o Firefox adiciona em botões focados. */
+  padding: 0; /* Remove um preenchimento interno que o Firefox adiciona em botões focados. */
+}
+
+/**
+ * Restaura os estilos de foco removidos pela regra anterior.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; /* Adiciona um contorno pontilhado para indicar foco no Firefox. */
+}
+
+/**
+ * Corrige o preenchimento (padding) no Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; /* Corrige o preenchimento inconsistente do <fieldset> em navegadores. */
+}
+
+/**
+ * 1. Corrige a quebra de texto no Edge e IE.
+ * 2. Corrige a herança de cor de elementos <fieldset> no IE.
+ * 3. Remove o preenchimento para que os desenvolvedores não sejam pegos de surpresa
+ * ao zerar elementos <fieldset> em todos os navegadores.
+ */
+
+legend {
+  box-sizing: border-box; /* 1. Garante que o padding e a borda sejam incluídos na largura/altura total. */
+  color: inherit; /* 2. Garante que a legenda herde a cor do texto do fieldset. */
+  display: table; /* 1. Comportamento de tabela para conter o conteúdo e corrigir a quebra de linha. */
+  max-width: 100%; /* 1. Garante que a legenda não ultrapasse a largura do contêiner. */
+  padding: 0; /* 3. Remove o padding padrão para consistência. */
+  white-space: normal; /* 1. Permite que o texto da legenda quebre em múltiplas linhas. */
+}
+
+/**
+ * 1. Adiciona a exibição correta no IE 9-.
+ * 2. Adiciona o alinhamento vertical correto no Chrome, Firefox e Opera.
+ */
+
+progress {
+  display: inline-block; /* 1. Garante que a barra de progresso seja exibida corretamente. */
+  vertical-align: baseline; /* 2. Corrige o alinhamento vertical da barra de progresso. */
+}
+
+/**
+ * Remove a barra de rolagem vertical padrão no IE.
+ */
+
+textarea {
+  overflow: auto; /* Garante que a área de texto mostre uma barra de rolagem quando o conteúdo transbordar. */
+}
+
+/**
+ * 1. Adiciona o box-sizing correto no IE 10-.
+ * 2. Remove o preenchimento no IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1. Corrige o cálculo do tamanho da caixa de seleção. */
+  padding: 0; /* 2. Remove o preenchimento padrão para consistência. */
+}
+
+/**
+ * Corrige o estilo do cursor dos botões de incremento e decremento no Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; /* Corrige a altura dos botões de seta em campos numéricos no Chrome. */
+}
+
+/**
+ * 1. Corrige a aparência estranha no Chrome e Safari.
+ * 2. Corrige o estilo do contorno (outline) no Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1. Define a aparência para um campo de texto padrão, permitindo estilização. */
+  outline-offset: -2px; /* 2. Corrige o posicionamento do contorno de foco em campos de busca no Safari. */
+}
+
+/**
+ * Remove o preenchimento interno e os botões de cancelar no Chrome e Safari no macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove o botão 'X' de limpar e outras decorações dos campos de busca. */
+}
+
+/**
+ * 1. Corrige a incapacidade de estilizar tipos clicáveis no iOS e Safari.
+ * 2. Altera as propriedades da fonte para 'inherit' no Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1. Permite a estilização do botão de upload de arquivo. */
+  font: inherit; /* 2. Faz com que o botão herde as propriedades de fonte do seu contêiner. */
+}
+
+/* Interativo
+   ========================================================================== */
+
+/*
+ * Adiciona a exibição correta no IE 9-.
+ * 1. Adiciona a exibição correta no Edge, IE e Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block; /* Garante que os elementos <details> e <menu> sejam renderizados como blocos. */
+}
+
+/*
+ * Adiciona a exibição correta em todos os navegadores.
+ */
+
+summary {
+  display: list-item; /* Faz com que o elemento <summary> se comporte como um item de lista, geralmente mostrando um marcador. */
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Adiciona a exibição correta no IE 9-.
+ */
+
+canvas {
+  display: inline-block; /* Garante que o elemento <canvas> seja renderizado como um bloco em linha. */
+}
+
+/**
+ * Adiciona a exibição correta no IE.
+ */
+
+template {
+  display: none; /* Garante que o conteúdo de um <template> não seja exibido por padrão. */
+}
+
+/* Oculto
+   ========================================================================== */
+
+/**
+ * Adiciona a exibição correta no IE 10-.
+ */
+
+[hidden] {
+  display: none; /* Garante que qualquer elemento com o atributo 'hidden' seja ocultado, fornecendo compatibilidade com navegadores mais antigos. */
+}
