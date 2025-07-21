@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria de Imagens com Grid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .gallery-item {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.375rem;
+    }
+
+    /* Torna o container das imagens internas com altura fixa */
+    .img-wrapper {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container my-5">
+    <h2>Exercício</h2>
+    <hr>
+
+    <!-- Linha principal com alinhamento de altura entre as colunas -->
+    <div class="row g-3 align-items-stretch">
+
+      <!-- Coluna da imagem grande com altura 100% -->
+      <div class="col-md-6 h-100">
+        <div class="img-wrapper">
+          <img src="https://cdn.pixabay.com/photo/2021/02/11/19/31/cat-6006263_960_720.jpg" alt="Gato grande" class="gallery-item">
+        </div>
+      </div>
+
+      <!-- Coluna da direita com várias imagens internas -->
+      <div class="col-md-6 h-100">
+        <div class="row g-3 h-100 d-flex flex-column">
+
+          <div class="col-12 flex-grow-1">
+            <div class="img-wrapper">
+              <img src="https://tse3.mm.bing.net/th/id/OIP.-n_BoO-Kla10Euys8wXOxgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gato deitado" class="gallery-item">
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="img-wrapper">
+                <img src="https://www.que.es/wp-content/uploads/2021/02/Los-gatos-como-mascota-favorita-de-las-personas.jpg" alt="Gato no meio 1" class="gallery-item">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="img-wrapper">
+                <img src="https://cdn.pixabay.com/photo/2023/06/29/12/28/cats-8096304_1280.jpg" alt="Gato no meio 2" class="gallery-item">
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-4">
+              <div class="img-wrapper">
+                <img src="https://th.bing.com/th/id/R.98ddc35ba20929914cdf250057b985f1?rik=nE%2flf8dJZxkSRQ&pid=ImgRaw&r=0" alt="Gato embaixo 1" class="gallery-item">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="img-wrapper">
+                <img src="https://iguinho.com.br/canalnatureza/images/domesticos/gato32.jpg" alt="Gato embaixo 2" class="gallery-item">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="img-wrapper">
+                <img src="https://i.pinimg.com/originals/86/4e/b6/864eb62f706b522eb7fa5e51528b52b6.jpg" alt="Gato embaixo 3" class="gallery-item">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
