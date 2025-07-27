@@ -1,0 +1,122 @@
+<!doctype html> <!-- Define o tipo de documento: HTML5 -->
+<html lang="pt-br"> <!-- Início do documento HTML com idioma português brasileiro -->
+<head>
+    <meta charset="utf-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adapta o layout para diferentes tamanhos de tela, essencial para responsividade -->
+    <title>Desafio Modal - Login</title> <!-- Título da aba ou janela do navegador -->
+
+    <!-- Importa o CSS do Bootstrap para estilização e estrutura responsiva -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Importa a biblioteca Font Awesome para uso de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Centraliza o conteúdo do <body> vertical e horizontalmente */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Garante altura mínima de toda a tela */
+            background-color: #f8f9fa; /* Cor de fundo clara */
+        }
+        /* Botão do Facebook com cor personalizada */
+        .btn-facebook {
+            background-color: #3b5998;
+            color: white;
+        }
+        /* Botão do Google com cor personalizada */
+        .btn-google {
+            background-color: #db4437;
+            color: white;
+        }
+        /* Estilo ao passar o mouse sobre botão do Facebook */
+        .btn-facebook:hover {
+            background-color: #344e86;
+            color: white;
+        }
+        /* Estilo ao passar o mouse sobre botão do Google */
+        .btn-google:hover {
+            background-color: #c53d32;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botão que abre o modal de login -->
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+      Modal - Login
+    </button>
+
+    <!-- Estrutura do modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog"> <!-- Define o tamanho e o comportamento do modal -->
+            <div class="modal-content"> <!-- Conteúdo principal do modal -->
+                <div class="modal-body p-4"> <!-- Corpo do modal com espaçamento interno -->
+
+                    <!-- Mensagem inicial de boas-vindas -->
+                    <div class="text-center mb-4">
+                        <p class="text-secondary">Sign in to start your session</p>
+                    </div>
+
+                    <!-- Formulário de login -->
+                    <form>
+                        <!-- Campo de e-mail com ícone -->
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <span class="input-group-text">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+
+                        <!-- Campo de senha com ícone -->
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password">
+                            <span class="input-group-text">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+
+                        <!-- Checkbox de "Lembrar" + botão de login -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Remember Me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-4">Sign In</button>
+                        </div>
+                    </form>
+
+                    <!-- Separador visual -->
+                    <div class="text-center my-3">
+                        <span class="text-muted">- OR -</span>
+                    </div>
+
+                    <!-- Botões para login via redes sociais -->
+                    <div class="d-grid gap-2">
+                        <a href="#" class="btn btn-facebook">
+                            <i class="fab fa-facebook-f me-2"></i> Sign in using Facebook
+                        </a>
+                        <a href="#" class="btn btn-google">
+                            <i class="fab fa-google-plus-g me-2"></i> Sign in using Google+
+                        </a>
+                    </div>
+
+                    <!-- Links adicionais: recuperar senha ou cadastrar -->
+                    <div class="text-left mt-4">
+                        <a href="#" class="d-block mb-1 text-decoration-none">I forgot my password</a>
+                        <a href="#" class="d-block text-decoration-none">Register a new membership</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importa o JavaScript do Bootstrap para funcionalidade dos componentes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
