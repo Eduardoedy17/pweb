@@ -1,0 +1,43 @@
+/* O layout principal é controlado pelas classes do Bootstrap no HTML */
+body {
+    background-color: #d2d2d3;
+}
+
+/* Estilo customizado para os botões.
+  Criamos uma classe própria porque o botão padrão do Bootstrap (.btn)
+  não tem o layout de ícone sobre texto.
+*/
+.btn-custom {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    cursor: pointer;
+
+    /* Organiza o conteúdo interno (ícone e texto) na vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 80px;
+    font-size: 14px;
+    font-family: Arial, sans-serif; /* Garante a mesma fonte do body */
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do ícone dentro do botão */
+.btn-custom i {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 8px;
+}
