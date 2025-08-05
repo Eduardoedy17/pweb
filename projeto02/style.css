@@ -1,0 +1,454 @@
+/*
+ * ESTILOS APRIMORADOS - v2.0
+ * Foco: Visual Moderno, Paleta de Cores Profissional, Tipografia e UX.
+ * Este é um comentário geral que descreve o propósito do arquivo CSS.
+ */
+
+/* === Variáveis de Estilo (Tema) === */
+/* A pseudoclasse :root seleciona o elemento raiz do documento (o <html>). 
+   É o melhor lugar para declarar variáveis CSS globais. */
+:root {
+    /* --primary-color: Define a cor principal da interface, usada para botões e links. */
+    --primary-color: #2563eb;       /* Um azul mais vibrante e moderno */
+
+    /* --primary-hover-color: Define a cor que a cor primária terá ao passar o mouse. */
+    --primary-hover-color: #1d4ed8;
+
+    /* --background-color: Define a cor de fundo principal da página. */
+    --background-color: #f4f7f9;    /* Um cinza muito claro para o fundo */
+
+    /* --surface-color: Define a cor de fundo para elementos de superfície como cartões e modais. */
+    --surface-color: #ffffff;       /* Branco para cartões e modais */
+
+    /* --text-color: Define a cor principal do texto. */
+    --text-color: #1e293b;          /* Um cinza escuro, quase preto */
+
+    /* --text-light-color: Define uma cor de texto mais clara para informações secundárias. */
+    --text-light-color: #64748b;    /* Cinza mais claro para labels e textos secundários */
+
+    /* --border-color: Define a cor padrão das bordas. */
+    --border-color: #e2e8f0;        /* Cor de borda suave */
+
+    /* --border-focus-color: Define a cor da borda quando um elemento está em foco. */
+    --border-focus-color: var(--primary-color);
+
+    /* --danger-color: Define a cor para ações perigosas ou de erro (ex: deletar). */
+    --danger-color: #dc3545;
+
+    /* --success-color: Define a cor para ações de sucesso (ex: salvar). */
+    --success-color: #16a34a;
+
+    /* --warning-color: Define a cor para avisos ou alertas. */
+    --warning-color: #f59e0b;
+    
+    /* --font-family: Define a família de fontes principal para toda a aplicação. */
+    --font-family: 'Inter', sans-serif;
+
+    /* --border-radius: Define o raio do arredondamento das bordas dos elementos. */
+    --border-radius: 0.5rem;        /* Bordas mais arredondadas */
+
+    /* --box-shadow: Define uma sombra padrão para dar profundidade aos elementos. */
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* --transition-speed: Define a velocidade padrão para as animações de transição. */
+    --transition-speed: 0.2s;
+}
+
+/* === Estilos Globais e Layout === */
+/* Seleciona o elemento <body>, que contém todo o conteúdo visível da página. */
+body {
+    /* Define a cor de fundo do corpo da página usando a variável global. */
+    background-color: var(--background-color);
+
+    /* Define a cor do texto principal usando a variável global. */
+    color: var(--text-color);
+
+    /* Define a família de fontes para todo o corpo da página. */
+    font-family: var(--font-family);
+
+    /* Melhora a renderização (suavização) das fontes em navegadores baseados em WebKit (Chrome, Safari). */
+    -webkit-font-smoothing: antialiased;
+
+    /* Melhora a renderização (suavização) das fontes no Firefox em sistemas macOS. */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Cabeçalho Superior === */
+/* Seleciona o elemento com a classe 'top-navigation'. */
+.top-navigation {
+    /* Torna o fundo do cabeçalho transparente para se integrar ao layout. */
+    background-color: transparent;
+
+    /* Remove o preenchimento interno. */
+    padding: 0;
+
+    /* Adiciona uma margem na parte inferior para espaçamento. */
+    margin-bottom: 2rem;
+}
+
+/* === Container Principal e Seções === */
+/* Seleciona o elemento <main> que também tem a classe 'container-fluid'. */
+main.container-fluid {
+    /* Define a cor de fundo do container principal usando a variável de superfície. */
+    background-color: var(--surface-color);
+
+    /* Adiciona um preenchimento interno de 2rem em todos os lados. */
+    padding: 2rem;
+
+    /* Arredonda as bordas do container. */
+    border-radius: var(--border-radius);
+
+    /* Adiciona uma sombra para destacar o container. */
+    box-shadow: var(--box-shadow);
+}
+
+/* Seleciona elementos com a classe 'section-title'. */
+.section-title {
+    /* Define o tamanho da fonte do título da seção. */
+    font-size: 1.5rem;
+
+    /* Define o peso da fonte (600 = semibold). */
+    font-weight: 600;
+
+    /* Adiciona uma margem na parte inferior. */
+    margin-bottom: 1.5rem;
+
+    /* Adiciona um preenchimento na parte inferior. */
+    padding-bottom: 1rem;
+
+    /* Adiciona uma linha sólida na parte inferior para separar o título do conteúdo. */
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Seleciona o elemento com o id 'product-table-section'. */
+#product-table-section {
+    /* Adiciona uma margem no topo para criar espaçamento. */
+    margin-top: 2.5rem;
+}
+
+/* === Formulários (Inputs, Selects) === */
+/* Seleciona os rótulos de formulário com a classe 'form-label'. */
+.form-label {
+    /* Define a cor do texto do rótulo usando a variável de texto claro. */
+    color: var(--text-light-color);
+
+    /* Define o peso da fonte (500 = medium). */
+    font-weight: 500;
+
+    /* Define o tamanho da fonte. */
+    font-size: 0.875rem;
+}
+
+/* Seleciona elementos com a classe 'form-control' ou 'form-select'. */
+.form-control, .form-select {
+    /* Define a cor de fundo dos campos. */
+    background-color: #f8fafc;
+
+    /* Adiciona uma borda sólida com a cor de borda padrão. */
+    border: 1px solid var(--border-color);
+
+    /* Arredonda as bordas dos campos. */
+    border-radius: 0.375rem;
+
+    /* Adiciona preenchimento interno para o texto não ficar colado nas bordas. */
+    padding: 0.75rem 1rem;
+
+    /* Adiciona uma transição suave para todas as propriedades animáveis. */
+    transition: all var(--transition-speed) ease-in-out;
+}
+/* Seleciona os campos de formulário quando estão em foco (clicados/selecionados). */
+.form-control:focus, .form-select:focus {
+    /* Muda a cor de fundo para branco quando em foco. */
+    background-color: var(--surface-color);
+
+    /* Muda a cor da borda para a cor primária, destacando o campo. */
+    border-color: var(--border-focus-color);
+
+    /* Adiciona uma sombra externa (efeito de brilho) para indicar foco. */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+
+    /* Remove a borda de foco padrão do navegador para usar a nossa (box-shadow). */
+    outline: none;
+}
+
+/* === Botões === */
+/* Estilo base para todos os elementos com a classe 'btn'. */
+.btn {
+    /* Arredonda as bordas do botão. */
+    border-radius: 0.375rem;
+
+    /* Define o preenchimento interno do botão. */
+    padding: 0.65rem 1.25rem;
+
+    /* Define o peso da fonte (600 = semibold). */
+    font-weight: 600;
+
+    /* Remove qualquer borda padrão do botão. */
+    border: none;
+
+    /* Adiciona uma transição suave para todas as propriedades animáveis. */
+    transition: all var(--transition-speed) ease-in-out;
+}
+/* Estilo para o botão quando o mouse está sobre ele. */
+.btn:hover {
+    /* Move o botão 2 pixels para cima para criar um efeito de flutuação. */
+    transform: translateY(-2px);
+
+    /* Adiciona uma sombra mais pronunciada para destacar o botão. */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* Estilo para o botão quando está sendo pressionado. */
+.btn:active {
+    /* Retorna o botão à sua posição original, criando um efeito de clique. */
+    transform: translateY(0);
+}
+
+/* Estilo específico para botões primários. */
+.btn-primary {
+    /* Define a cor de fundo usando a variável de cor primária. */
+    background-color: var(--primary-color);
+
+    /* Define a cor do texto como branco. */
+    color: white;
+}
+/* Estilo para o botão primário quando o mouse está sobre ele. */
+.btn-primary:hover {
+    /* Escurece a cor de fundo usando a variável de hover. */
+    background-color: var(--primary-hover-color);
+
+    /* Mantém a cor do texto como branco. */
+    color: white;
+}
+
+/* Estilo para botões secundários. */
+.btn-secondary {
+    /* Define uma cor de fundo cinza claro. */
+    background-color: #e2e8f0;
+
+    /* Define uma cor de texto cinza escuro. */
+    color: #475569;
+}
+/* Estilo para o botão secundário quando o mouse está sobre ele. */
+.btn-secondary:hover {
+    /* Escurece ligeiramente a cor de fundo. */
+    background-color: #cbd5e1;
+
+    /* Escurece ligeiramente a cor do texto. */
+    color: #334155;
+}
+
+/* Estilo para botões de sucesso. */
+.btn-success {
+    /* Define a cor de fundo usando a variável de sucesso. */
+    background-color: var(--success-color);
+}
+
+/* Seleciona ícones (tag <i>) dentro de botões. */
+.btn i {
+    /* Adiciona uma margem à direita do ícone para separá-lo do texto. */
+    margin-right: 8px;
+}
+
+/* === Tabela de Produtos === */
+/* Seleciona elementos com a classe 'table'. */
+.table {
+    /* Define o modelo de borda para que o 'border-spacing' funcione. */
+    border-collapse: separate;
+
+    /* Adiciona um espaçamento vertical de 8px entre as linhas da tabela. */
+    border-spacing: 0 8px;
+}
+
+/* Seleciona as células de cabeçalho (<th>) dentro do <thead> da tabela. */
+.table thead th {
+    /* Remove qualquer borda do cabeçalho. */
+    border: none;
+
+    /* Define a cor do texto do cabeçalho usando a variável de texto claro. */
+    color: var(--text-light-color);
+
+    /* Transforma o texto para maiúsculas. */
+    text-transform: uppercase;
+
+    /* Define o tamanho da fonte. */
+    font-size: 0.75rem;
+
+    /* Adiciona espaçamento entre as letras. */
+    letter-spacing: 0.5px;
+
+    /* Define o peso da fonte (600 = semibold). */
+    font-weight: 600;
+}
+
+/* Seleciona as linhas (<tr>) dentro do corpo (<tbody>) da tabela. */
+.table tbody tr {
+    /* Define uma cor de fundo cinza claro para as linhas. */
+    background-color: #f8fafc;
+
+    /* Adiciona uma sombra sutil à linha. */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+
+    /* Adiciona uma transição suave para um efeito de hover elegante. */
+    transition: all var(--transition-speed) ease;
+}
+/* Estilo para a linha da tabela quando o mouse está sobre ela. */
+.table tbody tr:hover {
+    /* Muda a cor de fundo para branco. */
+    background-color: var(--surface-color);
+
+    /* Aumenta a sombra para destacar a linha. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+    /* Aumenta ligeiramente o tamanho da linha para um efeito de "zoom". */
+    transform: scale(1.015);
+
+    /* Garante que a linha em hover fique acima das outras. */
+    z-index: 10;
+
+    /* Necessário para que o z-index funcione corretamente. */
+    position: relative;
+}
+
+/* Seleciona as células de dados (<td>) da tabela. */
+.table td {
+    /* Remove qualquer borda da célula. */
+    border: none;
+
+    /* Adiciona preenchimento interno. */
+    padding: 1rem 1.25rem;
+
+    /* Alinha o conteúdo verticalmente ao meio. */
+    vertical-align: middle;
+}
+/* Seleciona a primeira célula (<td>) de cada linha. */
+.table td:first-child {
+    /* Arredonda o canto superior esquerdo. */
+    border-top-left-radius: 0.375rem;
+
+    /* Arredonda o canto inferior esquerdo. */
+    border-bottom-left-radius: 0.375rem;
+}
+/* Seleciona a última célula (<td>) de cada linha. */
+.table td:last-child {
+    /* Arredonda o canto superior direito. */
+    border-top-right-radius: 0.375rem;
+
+    /* Arredonda o canto inferior direito. */
+    border-bottom-right-radius: 0.375rem;
+}
+
+/* Seleciona botões dentro de um elemento com a classe 'table-actions'. */
+.table-actions .btn {
+    /* Define o fundo como transparente. */
+    background: transparent;
+
+    /* Adiciona uma borda sutil. */
+    border: 1px solid var(--border-color);
+
+    /* Define a cor do ícone. */
+    color: var(--text-light-color);
+
+    /* Define uma largura fixa. */
+    width: 36px;
+
+    /* Define uma altura fixa para criar um botão quadrado. */
+    height: 36px;
+
+    /* Remove o preenchimento para centralizar o ícone. */
+    padding: 0;
+
+    /* Ativa o Flexbox para alinhamento. */
+    display: inline-flex;
+
+    /* Alinha o ícone verticalmente ao centro. */
+    align-items: center;
+
+    /* Alinha o ícone horizontalmente ao centro. */
+    justify-content: center;
+}
+/* Estilo para os botões de ação da tabela quando o mouse está sobre eles. */
+.table-actions .btn:hover {
+    /* Muda a cor do ícone para branco. */
+    color: var(--surface-color);
+
+    /* Remove a sombra que seria herdada do estilo .btn:hover. */
+    box-shadow: none;
+}
+/* Define a cor de fundo e da borda para o botão de informação no hover. */
+.table-actions .btn-outline-info:hover { background-color: #0ea5e9; border-color: #0ea5e9; }
+/* Define a cor de fundo e da borda para o botão de aviso no hover. */
+.table-actions .btn-outline-warning:hover { background-color: var(--warning-color); border-color: var(--warning-color); }
+/* Define a cor de fundo e da borda para o botão de perigo no hover. */
+.table-actions .btn-outline-danger:hover { background-color: var(--danger-color); border-color: var(--danger-color); }
+
+/* Seleciona ícones dentro dos botões de ação da tabela. */
+.table-actions .btn i {
+    /* Remove a margem que foi adicionada anteriormente no estilo .btn i. */
+    margin: 0;
+}
+
+/* === Modals === */
+/* Seleciona o conteúdo do modal. */
+.modal-content {
+    /* Arredonda as bordas do modal. */
+    border-radius: var(--border-radius);
+
+    /* Remove a borda padrão. */
+    border: none;
+
+    /* Adiciona uma sombra pronunciada para destacar o modal sobre o conteúdo. */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* Seleciona o cabeçalho do modal. */
+.modal-header {
+    /* Adiciona uma linha na parte inferior para separar o cabeçalho do corpo. */
+    border-bottom: 1px solid var(--border-color);
+}
+/* Seleciona o rodapé do modal. */
+.modal-footer {
+    /* Define uma cor de fundo ligeiramente diferente para o rodapé. */
+    background-color: #f8fafc;
+
+    /* Adiciona uma linha no topo para separar o rodapé do corpo. */
+    border-top: 1px solid var(--border-color);
+}
+/* Seleciona o título do modal. */
+.modal-title {
+    /* Define o peso da fonte (600 = semibold). */
+    font-weight: 600;
+
+    /* Define a cor do texto do título. */
+    color: var(--text-color);
+}
+
+/* === Classes Utilitárias (Badges) === */
+/* Estilo base para elementos com a classe 'badge'. */
+.badge {
+    /* Cria um arredondamento total, resultando em um formato de pílula. */
+    border-radius: 999px;
+
+    /* Define o preenchimento interno. */
+    padding: 0.4em 0.8em;
+
+    /* Define o tamanho da fonte. */
+    font-size: 0.75rem;
+
+    /* Define o peso da fonte (600 = semibold). */
+    font-weight: 600;
+}
+/* Estilo para badges de sucesso. */
+.badge.bg-success {
+    /* Define uma cor de fundo verde clara e semitransparente. !important força a sobreposição. */
+    background-color: rgba(22, 163, 74, 0.1) !important;
+
+    /* Define uma cor de texto verde escura. !important força a sobreposição. */
+    color: #15803d !important;
+}
+/* Estilo para badges de perigo. */
+.badge.bg-danger {
+    /* Define uma cor de fundo vermelha clara e semitransparente. !important força a sobreposição. */
+    background-color: rgba(220, 53, 69, 0.1) !important;
+
+    /* Define uma cor de texto vermelha escura. !important força a sobreposição. */
+    color: #b91c1c !important;
+}
