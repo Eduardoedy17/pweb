@@ -1,0 +1,43 @@
+/* Define a fonte padrão para toda a página para um visual mais limpo */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f4f4; /* Fundo cinza claro para contraste */
+}
+
+/* Estilo para o cabeçalho azul dos Correios */
+.bg-correios-azul {
+    background-color: #004d8b;
+}
+
+/* Estilo para os detalhes em amarelo, como o botão e a borda do card */
+.border-correios-amarelo {
+    border: 2px solid #ffc72c;
+}
+
+.btn-correios-amarelo {
+    background-color: #ffc72c;
+    color: #004d8b;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-correios-amarelo:hover {
+    background-color: #f2bb20;
+    color: #003b6a;
+}
+
+/* Garante que a logo tenha um tamanho fixo e adequado */
+header img {
+    height: 40px;
+}
+
+/* Deixa os campos de resultado com uma aparência mais "travada" */
+input[readonly] {
+    background-color: #e9ecef; /* Fundo cinza para campos somente leitura */
+    cursor: not-allowed;
+}
+
+/* Centraliza o texto dentro do span do UF (Estado) */
+.input-group-text {
+    justify-content: center;
+}

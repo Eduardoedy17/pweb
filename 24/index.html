@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Introdução ao jQuery</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        /* Estilo para as caixas de demonstração de eventos (Click, Dblclick, etc.). */
+        .box1 {
+            height: 100px;         /* Define a altura. */
+            width: 150px;          /* Define a largura. */
+            background: #428bca;   /* Define a cor de fundo azul. */
+        }
+        
+        /* Estilo para a segunda caixa em cada par de demonstração. */
+        .box2 {
+            height: 100px;         /* Define a altura. */
+            width: 150px;          /* Define a largura. */
+            background: #5cb85c;   /* Define a cor de fundo verde. */
+            margin-left: 15px;     /* Adiciona uma margem à esquerda para espaçamento. */
+        }
+
+        /* Estilo para a div que mostrará as informações do JSON. */
+        .informacoes_json {
+            margin-top: 20px;      /* Adiciona uma margem no topo para separar do resto. */
+        }
+
+        /* Estilo para a div usada na primeira demonstração de ocultar/exibir. */
+        .caixa_demonstracao {
+            height: 100px;         /* Define a altura. */
+            width: 100px;          /* Define a largura. */
+        }
+    </style>
+    </head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>SELECIONANDO ELEMENTOS COM JQUERY</h1>
+        </div>
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Parágrafos (p)</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Divisões (div)</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Campos (input)</h4>
+            </div>
+            </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="bg-primary text-white p-2">Este é um parágrafo</p>
+                <p class="bg-success text-white p-2">Este é outro parágrafo</p>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="caixa_demonstracao" style="background:#428bca;"></div>
+                <div class="caixa_demonstracao" style="background:#5cb85c; margin-left:15px;"></div>
+            </div>
+            <div class="col-md-4">
+                <input id="campo1" type="text" placeholder="input ID 01" class="form-control mb-2" />
+                <input id="campo2" type="text" placeholder="input ID 02" class="form-control" />
+            </div>
+            </div>
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('p', false)">Esconder parágrafos</button>
+                <button type="button" class="btn btn-success" onclick="exibirOcultarGenerica('p', true)">Exibir parágrafos</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('.caixa_demonstracao', false)">Esconder divs</button>
+                <button type="button" class="btn btn-success" onclick="exibirOcultarGenerica('.caixa_demonstracao', true)">Exibir divs</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('#campo1', false)">Esconder input 1</button>
+                <button type="button" class="btn btn-success" onclick="exibirOcultarGenerica('#campo1', true)">Exibir input 1</button>
+                 <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('#campo2', false)">Esconder input 2</button>
+                <button type="button" class="btn btn-success" onclick="exibirOcultarGenerica('#campo2', true)">Exibir input 2</button>
+            </div>
+            </div>
+        <hr>
+
+        <div class="d-flex flex-row">
+            <div class="d-flex flex-row col-md-4">
+                <div class="caixa01 float-left box1 d-flex align-items-center justify-content-center text-white">Evento Click</div>
+                <div class="caixa01 float-left box2 d-flex align-items-center justify-content-center text-white">Evento Click</div>
+            </div>
+            <div class="d-flex flex-row col-md-4">
+                <div class="caixa02 float-left box1 d-flex align-items-center justify-content-center text-white">Evento Dblclick</div>
+                <div class="caixa02 float-left box2 d-flex align-items-center justify-content-center text-white">Evento Dblclick</div>
+            </div>
+            <div class="d-flex flex-row col-md-4">
+                <div class="caixa03 float-left box1 d-flex align-items-center justify-content-center text-white">Evento Mouseover</div>
+                 <div class="caixa03 float-left box2 d-flex align-items-center justify-content-center text-white">Evento Mouseover</div>
+            </div>
+            </div>
+        <hr>
+
+        <div id="info-json" class="informacoes_json"></div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        // --- FUNÇÕES ---
+        // Função reutilizável para mostrar ou esconder elementos com base em um seletor CSS.
+        function exibirOcultarGenerica(seletor, exibir) {
+            // Se o parâmetro 'exibir' for verdadeiro...
+            if (exibir) {
+                // ...usa o jQuery para mostrar o(s) elemento(s) com uma animação de 1 segundo.
+                $(seletor).show(1000);
+            } else { // Caso contrário...
+                // ...usa o jQuery para esconder o(s) elemento(s) com uma animação de 1 segundo.
+                $(seletor).hide(1000);
+            }
+        }
+
+        // --- MANIPULADORES DE EVENTOS ---
+        // O código dentro desta função só será executado quando o documento HTML estiver completamente carregado.
+        $(document).ready(function () {
+
+            // Seleciona elementos com a classe '.caixa01' e anexa um evento de clique.
+            $('.caixa01').click(function () {
+                // Quando clicado, exibe um alerta na tela.
+                alert('Evento Click');
+            });
+
+            // Seleciona elementos com a classe '.caixa02' e anexa um evento de clique duplo.
+            $('.caixa02').dblclick(function () {
+                // Quando receber um clique duplo, exibe um alerta.
+                alert('Evento Dblclick');
+            });
+
+            // Seleciona elementos com a classe '.caixa03' e anexa um evento de 'mouseover'.
+            $('.caixa03').mouseover(function () {
+                // Quando o mouse passar por cima, exibe um alerta.
+                alert('Evento Mouseover');
+            });
+            
+            // --- MANIPULAÇÃO DE JSON ---
+            // Uma string de texto formatada como JSON (JavaScript Object Notation).
+            var clienteTxt = '{"id":123321, "nome":"Eduardo Sousa","datanasc":"12/02/1997"}';
+            
+            // Converte a string JSON em um objeto JavaScript para que possamos usar seus dados.
+            var cliente = JSON.parse(clienteTxt);
+            
+            // Constrói o HTML que será inserido na página.
+            var html_info = "<h4>Informações do Cliente (JSON)</h4>" +
+                            "ID: " + cliente.id + "<br>" +
+                            "Nome: " + cliente.nome + "<br>" +
+                            "Nascimento: " + cliente.datanasc + "<br>";
+
+            // Seleciona a div com id="info-json" e insere o conteúdo HTML nela.
+            $('#info-json').html(html_info);
+        });
+
+    </script>
+    </body>
+</html>
